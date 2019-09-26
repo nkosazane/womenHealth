@@ -62,18 +62,4 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateForward('/register');
   }
 
-  recover(value) {
-    this.authService.recover(value)
-      .then(res => {
-        console.log(res);
-        this.errorMessage = "";
-        this.navCtrl.navigateBack('/login');
-      },
-      err => {
-        console.log(err);
-        this.errorMessage = err.message;
-        
-      })
-    }
- 
 }
