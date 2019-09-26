@@ -26,6 +26,9 @@ const firebaseConfig = {
   measurementId: "G-J3F1H2MRRX"
 };
 
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
