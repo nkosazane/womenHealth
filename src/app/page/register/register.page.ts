@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { NavController } from '@ionic/angular';
-import { AuthService } from '../../service/auth.service';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class RegisterPage implements OnInit {
   validations_form: FormGroup;
   errorMessage: string = '';
   
   constructor(
     private navCtrl: NavController,
     private authService: AuthService,
-    private formBuilder: FormBuilder,
-    private afauth: AngularFireAuth,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {
@@ -29,6 +27,10 @@ export class LoginPage implements OnInit {
       ])),
       password: new FormControl('', Validators.compose([
         Validators.minLength(5),
+        Validators.required
+      ])),
+      name: new FormControl('', Validators.compose([
+        Validators.minLength(3),
         Validators.required
       ])),
     });
@@ -43,37 +45,28 @@ export class LoginPage implements OnInit {
     'password': [
       { type: 'required', message: 'Password is required.' },
       { type: 'minlength', message: 'Password must be at least 5 characters long.' }
+    ],
+    'name': [
+      {type: 'required', message: 'Name is required.'},
+      {type: 'minlength', message: 'Name must be at least 3 characters long.'}
     ]
   };
  
  
-  loginUser(value){
-    this.authService.loginUser(value)
+  registerUser(value){
+    this.authService.registerUser(value)
     .then(res => {
       console.log(res);
       this.errorMessage = "";
-      this.navCtrl.navigateForward('/dashboard');
+      this.navCtrl.navigateForward('/login');
     }, err => {
       this.errorMessage = err.message;
     })
   }
  
-  goToRegisterPage(){
-    this.navCtrl.navigateForward('/register');
+  goToLogin(){
+    this.navCtrl.navigateForward('/login');
   }
-
-  recover(value) {
-    this.authService.recover(value)
-      .then(res => {
-        console.log(res);
-        this.errorMessage = "";
-        this.navCtrl.navigateBack('/login');
-      },
-      err => {
-        console.log(err);
-        this.errorMessage = err.message;
-        
-      })
-    }
  
 }
+

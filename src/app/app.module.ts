@@ -15,6 +15,9 @@ import * as firebase from 'firebase';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 
+
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
   authDomain: "womanhealth-a607a.firebaseapp.com",
@@ -25,7 +28,8 @@ const firebaseConfig = {
   appId: "1:726806845953:web:39c6eaca3f5eee076f7e00",
   measurementId: "G-J3F1H2MRRX"
 };
-
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -35,6 +39,7 @@ const firebaseConfig = {
       AngularFireAuthModule,
       ReactiveFormsModule,
       AngularFireModule.initializeApp(firebaseConfig),
+      AngularFireAuthModule,
     ],
   providers: [
     StatusBar,

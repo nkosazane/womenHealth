@@ -23,7 +23,15 @@ export class AuthService {
         err => reject(err))
     })
    }
-  
+    
+   recover(value){
+    return new Promise<any>((resolve, reject) => {
+      firebase.auth().sendPasswordResetEmail(value.email, value.password)
+      .then(
+        res => resolve(res),
+        err => reject(err))
+    })
+   }
    logoutUser(){
      return new Promise((resolve, reject) => {
        if(firebase.auth().currentUser){
