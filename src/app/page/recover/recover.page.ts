@@ -45,12 +45,12 @@ export class RecoverPage implements OnInit {
     ]
   };
  
-  recover(value) {
-    this.authService.recover(value)
+  recover() {
+    this.authService.recover(this.email)
       .then(res => {
         console.log(res);
         this.errorMessage = "";
-        this.navCtrl.navigateBack('/login');
+        // this.navCtrl.navigateBack('/login');
       },
       err => {
         console.log(err);

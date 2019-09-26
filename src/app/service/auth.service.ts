@@ -26,7 +26,7 @@ export class AuthService {
     
    recover(value){
     return new Promise<any>((resolve, reject) => {
-      firebase.auth().sendPasswordResetEmail(value.email, value.password)
+      firebase.auth().sendPasswordResetEmail(value.email)
       .then(
         res => resolve(res),
         err => reject(err))
