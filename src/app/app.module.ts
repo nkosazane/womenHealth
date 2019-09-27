@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './service/auth.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import * as firebase from 'firebase';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 
 const firebaseConfig = {
@@ -35,6 +35,7 @@ const firebaseConfig = {
       AppRoutingModule,
       AngularFireAuthModule,
       ReactiveFormsModule,
+      FormsModule,
       AngularFireModule.initializeApp(firebaseConfig),
       AngularFireAuthModule,
     ],
