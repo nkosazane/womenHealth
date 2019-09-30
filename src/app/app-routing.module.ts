@@ -6,7 +6,9 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'login', loadChildren: './page/login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './page/register/register.module#RegisterPageModule' },
-  { path: 'recover', loadChildren: './page/recover/recover.module#RecoverPageModule' }
+  { path: 'recover', loadChildren: './page/recover/recover.module#RecoverPageModule' },  { path: 'donation', loadChildren: './page/donation/donation.module#DonationPageModule' },
+  { path: 'chat-forum', loadChildren: './page/chat-forum/chat-forum.module#ChatForumPageModule' }
+
 
 ];
 
