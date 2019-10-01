@@ -1,5 +1,7 @@
 {
   "name": "card",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

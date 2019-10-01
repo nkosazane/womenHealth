@@ -15,6 +15,7 @@ import * as firebase from 'firebase';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
   authDomain: "womanhealth-a607a.firebaseapp.com",

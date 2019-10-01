@@ -5,5 +5,29 @@
 </ion-header>
 
 <ion-content>
+    
+<mbsc-numpad [(ngModel)]="myNumpad">Default</mbsc-numpad>
+
+  <div class="md-donation-cont">
+    <div class="md-donation">
+        <div class="md-header">Giving feels good</div>
+
+        <img src="https://img.mobiscroll.com/demos/heart.png" class="md-heart" />
+
+        <div class="md-donate-padding">
+            <div class="md-btn-cont">
+                <button class="md-btn mbsc-btn">$500</button>
+                <button class="md-btn mbsc-btn">$250</button>
+                <button class="md-btn mbsc-btn">$100</button>
+            </div>
+            <label class="md-input-cont">
+                <input  type= "tel" class="md-donation-input" [(ngModel)]="numpad" placeholder="Other amount..." />
+            </label>
+        </div>
+
+        <button class="md-donation-btn mbsc-btn">Donate now</button>
+
+    </div>
+</div>
 
 </ion-content>
