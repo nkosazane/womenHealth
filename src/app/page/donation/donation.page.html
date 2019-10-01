@@ -6,7 +6,7 @@
 
 <ion-content>
     
-<mbsc-numpad [(ngModel)]="myNumpad">Default</mbsc-numpad>
+
 
   <div class="md-donation-cont">
     <div class="md-donation">
@@ -16,16 +16,16 @@
 
         <div class="md-donate-padding">
             <div class="md-btn-cont">
-                <button class="md-btn mbsc-btn">$500</button>
-                <button class="md-btn mbsc-btn">$250</button>
-                <button class="md-btn mbsc-btn">$100</button>
+                <ion-button >$500</ion-button>
+                <ion-button >$250</ion-button>
+                <ion-button >$100</ion-button>
             </div>
             <label class="md-input-cont">
                 <input  type= "tel" class="md-donation-input" [(ngModel)]="numpad" placeholder="Other amount..." />
             </label>
         </div>
 
-        <button class="md-donation-btn mbsc-btn">Donate now</button>
+        <ion-button class="md-donation-btn mbsc-btn">Donate now</ion-button>
 
     </div>
 </div>
