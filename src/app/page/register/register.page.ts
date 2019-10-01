@@ -9,17 +9,19 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
+ 
   validations_form: FormGroup;
   errorMessage: string = '';
-  
+  successMessage: string = '';
+ 
+ 
   constructor(
     private navCtrl: NavController,
     private authService: AuthService,
     private formBuilder: FormBuilder
-  ) { }
-
-  ngOnInit() {
+  ) {}
  
+  ngOnInit(){
     this.validations_form = this.formBuilder.group({
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -29,43 +31,35 @@ export class RegisterPage implements OnInit {
         Validators.minLength(5),
         Validators.required
       ])),
-      name: new FormControl('', Validators.compose([
-        Validators.minLength(3),
-        Validators.required
-      ])),
     });
   }
- 
- 
   validation_messages = {
     'email': [
       { type: 'required', message: 'Email is required.' },
-      { type: 'pattern', message: 'Please enter a valid email.' }
+      { type: 'pattern', message: 'Enter a valid email.' }
     ],
     'password': [
       { type: 'required', message: 'Password is required.' },
       { type: 'minlength', message: 'Password must be at least 5 characters long.' }
-    ],
-    'name': [
-      {type: 'required', message: 'Name is required.'},
-      {type: 'minlength', message: 'Name must be at least 3 characters long.'}
     ]
   };
+  
  
- 
-  registerUser(value){
+  tryRegister(value){
     this.authService.registerUser(value)
-    .then(res => {
-      console.log(res);
-      this.errorMessage = "";
-      this.navCtrl.navigateForward('/login');
-    }, err => {
-      this.errorMessage = err.message;
-    })
+     .then(res => {
+       console.log(res);
+       this.errorMessage = "";
+       this.successMessage = "Your account has been created. Please log in.";
+     }, err => {
+       console.log(err);
+       this.errorMessage = err.message;
+       this.successMessage = "";
+     })
   }
  
-  goToLogin(){
-    this.navCtrl.navigateForward('/login');
+  goLoginPage(){
+    this.navCtrl.navigateBack('');
   }
  
 }

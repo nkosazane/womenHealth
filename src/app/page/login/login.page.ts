@@ -10,16 +10,18 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+ 
   validations_form: FormGroup;
   errorMessage: string = '';
-  
+ 
   constructor(
+ 
     private navCtrl: NavController,
     private authService: AuthService,
-    private formBuilder: FormBuilder,
-    private afauth: AngularFireAuth,
+    private formBuilder: FormBuilder
+ 
   ) { }
-
+ 
   ngOnInit() {
  
     this.validations_form = this.formBuilder.group({
@@ -52,7 +54,7 @@ export class LoginPage implements OnInit {
     .then(res => {
       console.log(res);
       this.errorMessage = "";
-      this.navCtrl.navigateForward('/dashboard');
+      this.navCtrl.navigateForward('/home');
     }, err => {
       this.errorMessage = err.message;
     })

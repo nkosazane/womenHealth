@@ -38,14 +38,7 @@ export class AuthService {
     })
    }
     
-   recover(value){
-    return new Promise<any>((resolve, reject) => {
-      firebase.auth().sendPasswordResetEmail(value.email)
-      .then(
-        res => resolve(res),
-        err => reject(err))
-    })
-   }
+
    logoutUser(){
      return new Promise((resolve, reject) => {
        if(firebase.auth().currentUser){
@@ -85,5 +78,9 @@ export class AuthService {
   isUserLoggedIn() {
     return JSON.parse(localStorage.getItem('user'));
   }
+
+  // userDetails(){
+  //   return firebase.auth().currentUser;
+  // }
  
 }

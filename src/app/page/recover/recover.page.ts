@@ -11,28 +11,25 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class RecoverPage implements OnInit {
   title = 'firebaseLogin';
-
-  isForgotPassword: boolean;
-  emailInput;
-  email: string;
-  validations_form: FormGroup;
-  errorMessage: string = '';
-  responseMessage: string;
-  responseMessageType: string;
+ 
   selectedVal: string;
-  userDetails: any;
+  responseMessage: string = '';
+  responseMessageType: string = '';
+  emailInput: string;
   passwordInput: string;
-
+  isForgotPassword: boolean;
+  userDetails: any;
+ 
  
   constructor(
-    private navCtrl: NavController,
-    private authService: AuthService,
-    private formBuilder: FormBuilder,
-    private afauth: AngularFireAuth,
-  ) { 
+    private authService: AuthService
+  ) {
     this.selectedVal = 'login';
     this.isForgotPassword = false;
+ 
   }
+ 
+  // Comman Method to Show Message and Hide after 2 seconds
   showMessage(type, msg) {
     this.responseMessageType = type;
     this.responseMessage = msg;
@@ -40,16 +37,18 @@ export class RecoverPage implements OnInit {
       this.responseMessage = "";
     }, 2000);
   }
+ 
+  // Called on switching Login/ Register tabs
   public onValChange(val: string) {
     this.showMessage("", "");
     this.selectedVal = val;
   }
-  
+ 
   // Check localStorage is having User Data
   isUserLoggedIn() {
     this.userDetails = this.authService.isUserLoggedIn();
   }
-  
+ 
   // SignOut Firebase Session and Clean LocalStorage
   logoutUser() {
     this.authService.logout()
@@ -107,8 +106,18 @@ export class RecoverPage implements OnInit {
         this.showMessage("danger", err.message);
       });
   }
- 
- 
-  ngOnInit() {
-  }
+ ngOnInit(){
+   
+ }
+  // Open Popup to Login with Google Account
+  // googleLogin() {
+  //   this.authService.loginWithGoogle()
+  //     .then(res => {
+  //       console.log(res);
+  //       this.showMessage("success", "Successfully Logged In with Google");
+  //       this.isUserLoggedIn();
+  //     }, err => {
+  //       this.showMessage("danger", err.message);
+  //     });
+  // }
 }
