@@ -1,33 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>donation</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="md-donation-cont">
+  <div class="md-donation">
+      <div class="md-header">Giving feels good</div>
 
-<ion-content>
-    
+      <img src="https://img.mobiscroll.com/demos/heart.png" class="md-heart" />
 
+      <div class="md-donate-padding">
+          <div class="md-btn-cont">
+              <ion-button >$500</ion-button>
+              <ion-button >$250</ion-button>
+              <ion-button >$100</ion-button>
+          </div>
+          <br>
+          <label class="md-input-cont">
+              <input type="tel" class="md-donation-input" [(ngModel)]="numpad" placeholder="Other amount..." />
+          </label>
+      </div>
 
-  <div class="md-donation-cont">
-    <div class="md-donation">
-        <div class="md-header">Giving feels good</div>
+      <ion-button class="md-donation-btn mbsc-btn" >Donate now</ion-button>
 
-        <img src="https://img.mobiscroll.com/demos/heart.png" class="md-heart" />
-
-        <div class="md-donate-padding">
-            <div class="md-btn-cont">
-                <ion-button >$500</ion-button>
-                <ion-button >$250</ion-button>
-                <ion-button >$100</ion-button>
-            </div>
-            <label class="md-input-cont">
-                <input  type= "tel" class="md-donation-input" [(ngModel)]="numpad" placeholder="Other amount..." />
-            </label>
-        </div>
-
-        <ion-button class="md-donation-btn mbsc-btn">Donate now</ion-button>
-
-    </div>
+  </div>
 </div>
-
-</ion-content>

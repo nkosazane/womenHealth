@@ -15,6 +15,7 @@ import * as firebase from 'firebase';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 
+import { PayPal } from '@ionic-native/paypal/ngx';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
@@ -44,6 +45,7 @@ const firebaseConfig = {
     StatusBar,
     SplashScreen,
     AuthService,
+    PayPal,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

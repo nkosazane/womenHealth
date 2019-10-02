@@ -1,60 +1,33 @@
 
+
 .md-donation-cont {
-    height: 100%;
+  height: 100%;
 }
 
 .md-donation {
-    background: #fff;
-    min-height: 100%;
-    position: relative;
+  background: #fff;
+  min-height: 100%;
+  position: relative;
 }
 
 .md-donation .md-header {
-    color: #fb354c;
-    font-size: 35px;
-    text-align: center;
-    padding: 60px 0 20px 0;
+  color: #fb354c;
+  font-size: 35px;
+  text-align: center;
+  padding: 60px 0 20px 0;
 }
 
 .md-donation .md-heart {
-    width: 100%;
-    padding-bottom: 50px;
+  width: 100%;
+  padding-bottom: 50px;
 }
 
 .md-donation .md-donate-padding {
-    padding: 2em 2em 6.5em 2em;
+  padding: 2em 2em 6.5em 2em;
 }
 
 /* button */
 
 .md-donation .md-btn-cont {
-    overflow: hidden;
+  overflow: hidden;
 }
-
-// /* style for each key*/
-// .ion-numeric-keyboard.white-keyboard .key {
-//     background-color: #fff;
-//     color: #5995DC;
-//     border-color: #eee;
-// }
-
-// /* style when a key is pressed */
-// .ion-numeric-keyboard.white-keyboard .key.activated {
-//     box-shadow: inset 0 1px 4px rgba(0, 0, 0, .1);
-//     background-color: rgba(230, 230, 230, 0.5);
-// }
-
-// /* style for control keys, you can also use .left-control-key and .right-control-key */
-// .ion-numeric-keyboard.white-keyboard .key.control-key {
-//     background-color: #fafafa;
-// }
-
-// /* style for the top bar with the done button */
-// .ion-numeric-keyboard.white-keyboard .ion-numeric-keyboard-top-bar {
-//     background-color: #fafafa;
-//     border-top: 1px #eee solid;
-//     border-bottom: 1px #eee solid;
-// }
-// .ion-numeric-keyboard.white-keyboard .ion-numeric-keyboard-top-bar button {
-//     color: #5995DC;
-// }

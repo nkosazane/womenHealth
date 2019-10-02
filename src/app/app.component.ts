@@ -9,7 +9,19 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  
+  public appPages = [
+    {
+      title: 'Paypal for Apps',
+      url: '/paypal',
+      icon: 'card'
+    },
+    {
+      title: 'Paypal for PWA',
+      url: '/paypal-web',
+      icon: 'card'
+    }
+  ];
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
