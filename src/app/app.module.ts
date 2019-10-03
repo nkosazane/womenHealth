@@ -16,6 +16,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 
 import { PayPal } from '@ionic-native/paypal/ngx';
+import { ExampleModalPageModule } from './page/example-modal/example-modal.module';
+import { AngularFirestore } from '@angular/fire/firestore';
+
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
@@ -40,12 +45,14 @@ const firebaseConfig = {
       FormsModule,
       AngularFireModule.initializeApp(firebaseConfig),
       AngularFireAuthModule,
+      ExampleModalPageModule
     ],
   providers: [
     StatusBar,
     SplashScreen,
     AuthService,
     PayPal,
+    AngularFirestore,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

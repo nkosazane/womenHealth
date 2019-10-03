@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'login', loadChildren: './page/login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './page/register/register.module#RegisterPageModule' },
   { path: 'recover', loadChildren: './page/recover/recover.module#RecoverPageModule' },  { path: 'donation', loadChildren: './page/donation/donation.module#DonationPageModule' },
-  { path: 'chat-forum', loadChildren: './page/chat-forum/chat-forum.module#ChatForumPageModule' }
+  { path: 'chat-forum', loadChildren: './page/chat-forum/chat-forum.module#ChatForumPageModule' },
+  { path: 'example-modal', loadChildren: './page/example-modal/example-modal.module#ExampleModalPageModule' }
 
 
 ];

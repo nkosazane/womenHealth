@@ -1,22 +1,96 @@
-<div class="md-donation-cont">
-  <div class="md-donation">
-      <div class="md-header">Giving feels good</div>
 
-      <img src="https://img.mobiscroll.com/demos/heart.png" class="md-heart" />
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic 4 Modal Popup Example
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+<!-- <ion-button>make donation</ion-button> -->
+<div class="ion-padding">
+      
+  
+<ion-button  (click)="openForm()">make donation</ion-button>
+    <!-- <button class="open-button" onclick="openForm()">Open Form</button> -->
 
-      <div class="md-donate-padding">
-          <div class="md-btn-cont">
-              <ion-button >$500</ion-button>
-              <ion-button >$250</ion-button>
-              <ion-button >$100</ion-button>
-          </div>
-          <br>
-          <label class="md-input-cont">
-              <input type="tel" class="md-donation-input" [(ngModel)]="numpad" placeholder="Other amount..." />
-          </label>
-      </div>
+<div class="form-popup ion-padding"  id="myForm">
+<form action="/action_page.php" class="form-container" >
+-------------------------------------------------
+  <h3>make a donation</h3>
+-------------------------------------------------
+  <h2 class="item-text-wrap">donation</h2>
+  
 
-      <ion-button class="md-donation-btn mbsc-btn" >Donate now</ion-button>
-
-  </div>
+ 
+  <ion-grid id="tempGrid">
+    
+    <ion-row>
+      <ion-col>
+          <ion-button class="btn" (click)="openForm2()">donate money</ion-button>
+      </ion-col>
+     
+      <ion-col>
+              <ion-button class="btn"(click)=" openForm2()">donate items</ion-button>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
+  
+</form>
 </div>
+
+<div class="form-popup ion-padding"  id="myForm2">
+  <form action="/action_page.php" class="form-container" >
+  -------------------------------------------------
+    <h3>donation form</h3>
+  -------------------------------------------------
+
+    <ion-grid id="tempGrid1">
+      
+      <ion-label>name</ion-label>
+      <ion-input type="name"></ion-input>
+      <ion-label>surname</ion-label>
+      <ion-input type="name"></ion-input>
+      <ion-row>
+        <ion-col>
+            <ion-button class="btn" (click)=" closeForm()">Edit</ion-button>
+        </ion-col>
+       
+        <ion-col>
+                <ion-button class="btn"(click)=" openForm3()+closeForm()">done</ion-button>
+        </ion-col>
+      </ion-row> 
+    </ion-grid>
+    
+  </form>
+  </div>
+
+  <div class="form-popup ion-padding"  id="myForm3">
+    <form action="/action_page.php" class="form-container" >
+    -------------------------------------------------
+      <h3>THANK YOU </h3>
+    -------------------------------------------------
+  
+      <ion-grid id="tempGrid2">
+        
+       banking details 
+       <br>
+       accounts
+        <ion-row>
+         
+         
+          <ion-col>
+                  <ion-button class="btn" >back</ion-button>
+          </ion-col>
+        </ion-row> 
+      </ion-grid>
+      
+    </form>
+    </div>
+
+  
+
+    
+</div>
+</ion-content>
