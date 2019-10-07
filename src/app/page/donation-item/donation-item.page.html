@@ -1,0 +1,111 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <br>
+  <br>
+  <ion-content padding>
+  
+    
+    <table>
+    <tr>
+  
+     <td>
+          Name:
+      </td>
+   
+      <td>
+        <input type="text" [formControl]="name">
+      
+    </td>
+  </tr>
+  <br>
+  <tr>
+  
+      <td>
+          Surname:
+       </td>
+    
+       <td>
+         <input type="text" [formControl]="Surname">
+       
+     </td>
+   </tr>
+   <br>
+   <tr>
+  
+      <td>
+           Age:
+       </td>
+    
+       <td>
+         <input type="number" [formControl]="Age">
+       
+     </td>
+   </tr>
+   <br>
+   <tr>
+  
+      <td>
+          Contact Number:
+       </td>
+    
+       <td>
+         <input type="number" [formControl]=" ContactNumber">
+       
+     </td>
+   </tr>
+   <br>
+   <tr>
+  
+      <td>
+        Donate Type:
+       </td>
+    
+       <td>
+         <input type="text" [formControl]=" Donationtype">
+       
+     </td>
+   </tr>
+  
+  
+  
+   <br>
+   <br>
+   <br>
+  
+      <!-- <label>
+          
+       
+        </label>
+        <br>
+        <br>
+        <label>
+            Surname:
+            <input type="text" [formControl]="Surname">
+          </label>
+          <br>
+          <br>
+          <label>
+              Age:
+              <input type="text" [formControl]="Age">
+            </label>
+            <br>
+            <br>
+            <label>
+                Contact Number:
+                <input type="text" [formControl]="ContactNumber">
+              </label>
+              <br>
+              <br>
+              <label>
+                  Donation Type:
+                  <input type="text" [formControl]=" Donationtype">
+                </label> -->
+              </table>
+  
+              <ion-button expand="block" color="medium" (click)="onsubmit()" >Submit</ion-button>
+  </ion-content>
+  

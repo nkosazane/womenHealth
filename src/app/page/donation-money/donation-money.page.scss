@@ -1,0 +1,48 @@
+ion-content {
+    --ion-background-color:hsl(335, 100%, 88%);
+  }
+  
+  
+  .md-donation-cont {
+    height: 100%;
+  }
+  
+  .md-donation {
+    // background: #db6fa5;
+    min-height: 100%;
+    position: relative;
+  }
+  
+  .md-donation .md-header {
+    color: black;
+    font-size: large;
+    text-align: left;
+    padding: 60px 0 20px 0;
+  }
+  
+  .md-donation .md-heart {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  
+  .md-donation .md-donate-padding {
+    padding: 2em 2em 6.5em 2em;
+  }
+  
+  /* button */
+  
+  .md-donation .md-btn-cont {
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  h1{
+    text-align: center;
+    font-size: larger;
+  }
+  h2{
+  text-align:center;
+  font-size: medium;
+  }
+  
+  

@@ -1,41 +1,90 @@
-
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Register</ion-title>
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
   </ion-toolbar>
-</ion-header>
- 
-<ion-content padding>
-  <form class="form" [formGroup]="validations_form"  (ngSubmit)="tryRegister(validations_form.value)">
- 
-    <ion-item>
-      <ion-label  position="floating" color="primary">Email</ion-label>
-      <ion-input type="text" formControlName="email"></ion-input>
-    </ion-item>
-    <div class="validation-errors">
-      <ng-container *ngFor="let validation of validation_messages.email">
-        <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
-          {{ validation.message }}
+</ion-header> -->
+
+<ion-content padding class="background-image">
+
+    <ion-card>
+    <form [formGroup]="register" class="form">
+      <div class="forms">
+        <div class="form">
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input type="text" formControlName="name" required ></ion-input>
+          </ion-item>
+          <div class="error" *ngIf="register.get('name').hasError('required') && register.get('name').touched">
+              Please input your Name
+          </div>
+          <div class="error" *ngIf="register.get('name').hasError('minlength') && register.get('name').touched">
+              Minimum 3 characters
+          </div>
+          <div class="error" *ngIf="register.get('name').hasError('maxlength') && register.get('name').touched">
+              Maximum 30 characters
+          </div>
+  
+          <ion-item>
+              <ion-label position="floating">Gender</ion-label>
+              <ion-input type="text" formControlName="gender" required></ion-input>
+            </ion-item>
+            <div class="error" *ngIf="register.get('gender').hasError('required') && register.get('gender').touched">
+                Please input your Name
+            </div>
+            <div class="error" *ngIf="register.get('gender').hasError('minlength') && register.get('gender').touched">
+                Minimum 3 characters
+            </div>
+            <div class="error" *ngIf="register.get('gender').hasError('maxlength') && register.get('gender').touched">
+                Maximum 30 characters
+            </div>
+  
+            <ion-item>
+                <ion-label position="floating">Age</ion-label>
+                <ion-input type="text" formControlName="age" required></ion-input>
+              </ion-item>
+              <div class="error" *ngIf="register.get('age').hasError('required') && register.get('age').touched">
+                  Please input your Name
+              </div>
+              <div class="error" *ngIf="register.get('age').hasError('minlength') && register.get('age').touched">
+                  Minimum 3 characters
+              </div>
+              <div class="error" *ngIf="register.get('age').hasError('maxlength') && register.get('age').touched">
+                  Maximum 30 characters
+              </div>
+  
+          <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <div class="error" *ngIf="register.get('email').hasError('required') && register.get('email').touched">
+              Please input your email
+          </div>
+          <div class="error" *ngIf="register.get('email').hasError('pattern') && register.get('email').touched">
+              Email address invalid
+          </div>
+  
+          <ion-item color="transparent" class="group">
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+          <div class="error" *ngIf="register.get('password').hasError('required') && register.get('password').touched">
+              Please input your password
+          </div>
+  
+          <div class="error" *ngIf="register.get('password').hasError('minlength') && register.get('password').touched">
+              Minimum 6 characters
+          </div>
+  
+          <div class="error" *ngIf="register.get('password').hasError('maxlength') && register.get('password').touched">
+              Maximum 12 characters
+          </div>
+  
         </div>
-      </ng-container>
-    </div>
- 
-    <ion-item>
-      <ion-label  position="floating" color="primary">Password</ion-label>
-      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
-    </ion-item>
-    <div class="validation-errors">
-      <ng-container *ngFor="let validation of validation_messages.password">
-        <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
-          {{ validation.message }}
-        </div>
-      </ng-container>
-    </div>
- 
-    
-    <ion-button  class="submit-btn" type="submit"  [disabled]="!validations_form.valid">Register</ion-button>
-    <label class="error-message">{{errorMessage}}</label>
-    <label class="success-message">{{successMessage}}</label>
-  </form>
-  <p class="go-to-login">Already have an account? <a (click)="goLoginPage()">Try to Log In.</a></p>
-</ion-content>
+      </div>
+    </form>
+  </ion-card>
+  <br><br>
+  
+  <ion-button expand="block" color="medium" [disabled]="!register.valid" (click)="registerUser()">Register</ion-button>
+  </ion-content>
+  

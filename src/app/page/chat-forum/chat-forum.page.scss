@@ -1,0 +1,64 @@
+.pp {
+    border-radius: 50%;
+  }
+  .background-image {
+    --background: url('../../../assets/feather.jpg')0 0/100% 100%  no-repeat;
+  }
+    .messages {
+       
+      display: flex;
+     flex-direction: column;
+     
+     .me{
+       position: relative;
+       margin: 20px 5px 0px;
+       max-width: 80%;
+       align-self: flex-end;
+       padding: 6px 10px 7px;
+       border-radius: 15px 15px 0;
+       background: rgb(138, 136, 137);
+       font-size: medium;
+       line-height:1 - 4;
+       float: right;
+      
+         }
+     .you{
+         position: relative;
+         margin: 15px;
+         max-width: 80%;
+         align-self: flex-start;
+         padding: 6px 10px 7px;
+         border-radius: 15px 15px 0;
+         background: rgb(241, 222, 237);
+         font-size: medium;
+         line-height:1 - 4;
+         float: left;
+    
+    }
+    .name{
+    font-size: small;
+    font-weight: bold
+    }
+    
+    }
+    
+  
+  .image-upload>input{
+      display:none;
+    }
+    
+    .input{
+      display: none;
+    }
+    .messages-page-navbar {
+        .chat-picture {
+          width: 50px;
+          border-radius: 50%;
+          float: left;
+        }
+       
+        .chat-title {
+          line-height: 50px;
+          float: left;
+        }
+      }

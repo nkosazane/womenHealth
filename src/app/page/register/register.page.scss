@@ -1,13 +1,17 @@
-// .background-image {
-//     --background: url('../../../assets/Image3.jpg')0 0/100% 100%  no-repeat;
-//   }
-// ion-content {
-//     --ion-background-color: rgb(185, 228, 245);
-//    }
-//    .Capture {
-//     vertical-align: middle;
-//     border-radius: 50%;
-//    }
-//    ion-card{
-//     --ion-background-color:white;
-//    }
+.background-image {
+    --background: url('../../../assets/back.jpg')0 0/100% 100%  no-repeat;
+   }
+ 
+ // ion-content {
+ //   --ion-background-color: rgb(185, 228, 245);
+ // }
+  .Capture {
+   vertical-align: middle;
+   border-radius: 50%;
+ }
+ ion-card{
+   --ion-background-color:none;
+ }
+ .icon {
+   font-size: 30px;
+ }

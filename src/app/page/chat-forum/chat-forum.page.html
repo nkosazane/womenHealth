@@ -1,9 +1,63 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>chatForum</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar  color="secondary" class="messages-page-navbar">
+        
+           
+            <label float-left (click)="back()" >
+            <ion-icon name="arrow-back" ></ion-icon>
+          </label>
+          <img float-left class="pp" src="../../../assets/Capture.JPG" width="60" height="60">
+  
+      <ion-title ><i><h3>Chat Forum</h3></i></ion-title>
+    
+        
+      <div class="image-upload" float-right>
+        <label for="file-input" (change)="upload($event)">
+            <ion-icon name="attach"> </ion-icon>
+      </label>
+     </div>
+   <br><br><br>
+        <div class="image-upload" float-right>
+    <label for="file-input">
+        <ion-icon class="input" name="attach"> </ion-icon>
+    
+    <input id="file-input" class="input" type="file" (change)="upload($event)" /> 
+  </label>
+  </div>
+      
+       
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="background-image">
+    
+          <div class="messages" *ngFor="let text of chatRef | async" >
+          
+              <div  class="me" *ngIf="key == text.UserID" >
+                  <span class="name"> Me:{{text.Name}}<br></span>
+                  <img  src="{{text.image}}" >
+                   {{text.Message}}</div>
+            
+              <div  class="you" *ngIf="key != text.UserID" >
+              <span class="name"> {{text.Name}}<br></span>
+              <img  src="{{text.image}}" >
+              {{text.Message}}</div>
+              </div>
+        
+  </ion-content>
+  <ion-footer>
+      <ion-toolbar class="messages-page-footer" position="bottom">
+       
+       <ion-item> 
+          <ion-button color="light"(click)="takePhoto()">
+              <ion-icon name="camera"></ion-icon>  
+            </ion-button>   
+          <ion-input [(ngModel)]="message" class="message-editor" placeholder="Type a message"></ion-input>
+     
+          <ion-button color="light" float-right class="message-editor-button" (click)="send()">
+            <ion-icon name="send"></ion-icon>
+          </ion-button>
+          
+      </ion-item>
+      </ion-toolbar>
+    </ion-footer>
+  

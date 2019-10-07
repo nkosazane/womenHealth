@@ -17,9 +17,11 @@ import { AngularFireModule } from '@angular/fire';
 
 import { PayPal } from '@ionic-native/paypal/ngx';
 import { ExampleModalPageModule } from './page/example-modal/example-modal.module';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
-
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { Camera } from '@ionic-native/camera/ngx';
 
 
 const firebaseConfig = {
@@ -45,11 +47,14 @@ const firebaseConfig = {
       FormsModule,
       AngularFireModule.initializeApp(firebaseConfig),
       AngularFireAuthModule,
+      AngularFirestoreModule,
+      AngularFireStorageModule,
       ExampleModalPageModule
     ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     AuthService,
     PayPal,
     AngularFirestore,

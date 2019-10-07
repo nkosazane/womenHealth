@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { NavController } from '@ionic/angular';
-import { AuthService } from '../../service/auth.service';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/service/auth.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -10,58 +10,57 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
- 
-  validations_form: FormGroup;
-  errorMessage: string = '';
- 
-  constructor(
- 
-    private navCtrl: NavController,
-    private authService: AuthService,
-    private formBuilder: FormBuilder
- 
-  ) { }
- 
-  ngOnInit() {
- 
-    this.validations_form = this.formBuilder.group({
-      email: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-      ])),
-      password: new FormControl('', Validators.compose([
-        Validators.minLength(5),
-        Validators.required
-      ])),
+  public loginForm: FormGroup;
+  public forgotpasswordForm: FormGroup;
+  isForgotPassword: boolean = true;
+  
+  constructor(private fb: FormBuilder, private router: Router, 
+    private authService: AuthService, private alertCtrl: AlertController) { 
+
+    this.loginForm = fb.group({
+      email: ['', Validators.compose([Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'), Validators.required])],
+      password: ['', Validators.compose([Validators.minLength(6), Validators.maxLength(12), Validators.required])],
     });
-  }
- 
- 
-  validation_messages = {
-    'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'pattern', message: 'Please enter a valid email.' }
-    ],
-    'password': [
-      { type: 'required', message: 'Password is required.' },
-      { type: 'minlength', message: 'Password must be at least 5 characters long.' }
-    ]
-  };
- 
- 
-  loginUser(value){
-    this.authService.loginUser(value)
-    .then(res => {
-      console.log(res);
-      this.errorMessage = "";
-      this.navCtrl.navigateForward('/home');
-    }, err => {
-      this.errorMessage = err.message;
+
+    this.forgotpasswordForm = fb.group({
+      email: ['', Validators.compose([Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'), Validators.required])],
     })
   }
- 
-  goToRegisterPage(){
-    this.navCtrl.navigateForward('/register');
+
+  ngOnInit() {
   }
 
+  loginUser(){
+    this.authService.login(this.loginForm.value.email, this.loginForm.value.password).then(() =>{
+      this.router.navigateByUrl('chat-forum')
+    }).catch(err=>{
+      alert(err.message)
+    })
+  }
+
+  forgotpassword() {
+    this.isForgotPassword = false;
+  }
+  Cancel(){
+    this.isForgotPassword = true;
+  }
+  reset() {
+    this.authService.sendPasswordResetEmail(this.forgotpasswordForm.value.email)
+    .then((success)=>{
+      this.alertCtrl.create({
+        // message: 'You can not order more than six',
+        subHeader: 'Check your Email account',
+        buttons: ['Ok']}).then(
+        alert=> alert.present()
+      );
+      this.isForgotPassword=true;
+    }).catch((error)=>{
+      this.alertCtrl.create({
+        // message: 'You can not order more than six',
+        subHeader: 'Wrong Email',
+        buttons: ['Ok']}).then(
+        alert=> alert.present()
+      );
+    })  
+  }
 }

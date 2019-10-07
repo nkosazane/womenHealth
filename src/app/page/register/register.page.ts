@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthService } from 'src/app/service/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,58 +11,60 @@ import { AuthService } from 'src/app/service/auth.service';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
- 
-  validations_form: FormGroup;
-  errorMessage: string = '';
-  successMessage: string = '';
- 
- 
-  constructor(
-    private navCtrl: NavController,
-    private authService: AuthService,
-    private formBuilder: FormBuilder
-  ) {}
- 
-  ngOnInit(){
-    this.validations_form = this.formBuilder.group({
-      email: new FormControl('', Validators.compose([
-        Validators.required,
-        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-      ])),
-      password: new FormControl('', Validators.compose([
-        Validators.minLength(5),
-        Validators.required
-      ])),
+
+  register: FormGroup;
+  name: any;
+  username: any;
+
+  constructor(private fb: FormBuilder, private angularfire: AngularFirestore,
+    private authService: AuthService, private afAuth: AngularFireAuth,
+    private router: Router) { 
+
+      this.register =  fb.group({
+        email: new FormControl('', Validators.compose([
+          Validators.required,
+          Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+        ])),
+        password: new FormControl('', Validators.compose([
+          Validators.minLength(5),
+          Validators.required
+        ])),
+        name: new FormControl('', Validators.compose([
+          Validators.minLength(3),
+          Validators.required
+        ])),
+        gender: new FormControl('', Validators.compose([
+          Validators.minLength(3),
+          Validators.required
+        ])),
+        age: new FormControl('', Validators.compose([
+          Validators.minLength(1),
+          Validators.required
+        ])),
+      })
+    }
+
+  ngOnInit() {
+  }
+
+  registerUser(){
+    this.authService.signup(this.register.value.email, this.register.value.password).then((value) =>{
+      localStorage.setItem('userid', this.afAuth.auth.currentUser.uid)
+
+      this.angularfire.collection('users').doc(this.afAuth.auth.currentUser.uid).set({
+        displayName: this.register.value.name,
+        email: this.register.value.email,
+        age: this.register.value.age,
+        gender: this.register.value.gender,
+      }).then(() => {
+        this.router.navigateByUrl('login');
+      }).catch(err =>{
+        alert(err.message)
+      })
+      this.afAuth.auth.currentUser.updateProfile({
+        displayName: this.register.value.name,
+      })
     });
   }
-  validation_messages = {
-    'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'pattern', message: 'Enter a valid email.' }
-    ],
-    'password': [
-      { type: 'required', message: 'Password is required.' },
-      { type: 'minlength', message: 'Password must be at least 5 characters long.' }
-    ]
-  };
-  
- 
-  tryRegister(value){
-    this.authService.registerUser(value)
-     .then(res => {
-       console.log(res);
-       this.errorMessage = "";
-       this.successMessage = "Your account has been created. Please log in.";
-     }, err => {
-       console.log(err);
-       this.errorMessage = err.message;
-       this.successMessage = "";
-     })
-  }
- 
-  goLoginPage(){
-    this.navCtrl.navigateBack('');
-  }
- 
-}
 
+}

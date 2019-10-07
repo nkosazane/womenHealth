@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar color="primary">
     <ion-title>
       {{ viewTitle }}
@@ -7,12 +7,23 @@
       <ion-button (click)="today()">Today</ion-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
+
+    <div class="form-group text-center">
+        <img src="../../../assets/Capture.JPG" alt="Capture" class="Capture" style="cursor: pointer;">
+        </div>
+  <h1><b>Women's Health!</b></h1>
+  <h2>Women's health needs to be front and center-it often isn't but needs to be</h2>
+  <br>
+  <br>
+  <ion-button expand="block" color="secondary" (click)="onlogin()" >Login</ion-button>
+  
+      
  
   <!-- Card for adding a new event -->
-  <ion-card>
+  <!-- <ion-card>
     <ion-card-header tappable (click)="collapseCard = !collapseCard">
       <ion-card-title>New Event</ion-card-title>
     </ion-card-header>
@@ -41,9 +52,9 @@
     </ion-card-content>
   </ion-card>
  
-  <ion-row>
+  <ion-row> -->
     <!-- Change the displayed calendar mode -->
-    <ion-col size="4">
+    <!-- <ion-col size="4">
       <ion-button expand="block" [color]="calendar.mode == 'month' ? 'primary' : 'secondary'" (click)="changeMode('month')">Month</ion-button>
     </ion-col>
     <ion-col size="4">
@@ -51,17 +62,17 @@
     </ion-col>
     <ion-col size="4">
       <ion-button expand="block" [color]="calendar.mode == 'day' ? 'primary' : 'secondary'" (click)="changeMode('day')">Day</ion-button>
-    </ion-col>
+    </ion-col> -->
  
     <!-- Move back one screen of the slides -->
-    <ion-col size="6" text-left>
+    <!-- <ion-col size="6" text-left>
       <ion-button fill="clear" (click)="back()">
         <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
       </ion-button>
-    </ion-col>
+    </ion-col> -->
  
     <!-- Move forward one screen of the slides -->
-    <ion-col size="6" text-right>
+    <!-- <ion-col size="6" text-right>
       <ion-button fill="clear" (click)="next()">
         <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
       </ion-button>
@@ -80,5 +91,7 @@
   step="30"
   startingDayWeek="1">
   </calendar>
- 
+  <p>Click button to open YouTube Video Player<br>
+    <ion-button (click)="openMyVideo('rhQmy93LZH8')">Open Video</ion-button>
+    </p> -->
 </ion-content>
