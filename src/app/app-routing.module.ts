@@ -12,7 +12,9 @@ const routes: Routes = [
   { path: 'example-modal', loadChildren: './page/example-modal/example-modal.module#ExampleModalPageModule' },
   { path: 'donation-item', loadChildren: './page/donation-item/donation-item.module#DonationItemPageModule' },
   { path: 'donation-money', loadChildren: './page/donation-money/donation-money.module#DonationMoneyPageModule' },
-  { path: 'video-tutorials', loadChildren: './page/video-tutorials/video-tutorials.module#VideoTutorialsPageModule' }
+  { path: 'video-tutorials', loadChildren: './page/video-tutorials/video-tutorials.module#VideoTutorialsPageModule' },  { path: 'profile', loadChildren: './page/profile/profile.module#ProfilePageModule' },
+  { path: 'paypal', loadChildren: './page/paypal/paypal.module#PaypalPageModule' }
+
 
 
 ];

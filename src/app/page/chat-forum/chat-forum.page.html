@@ -2,19 +2,19 @@
     <ion-toolbar  color="secondary" class="messages-page-navbar">
         
            
-            <label float-left (click)="back()" >
+          <label float-left (click)="back()" >
             <ion-icon name="arrow-back" ></ion-icon>
-          </label>
+          </label>  
           <img float-left class="pp" src="../../../assets/Capture.JPG" width="60" height="60">
   
       <ion-title ><i><h3>Chat Forum</h3></i></ion-title>
     
         
-      <div class="image-upload" float-right>
+      <!-- <div class="image-upload" float-right>
         <label for="file-input" (change)="upload($event)">
             <ion-icon name="attach"> </ion-icon>
       </label>
-     </div>
+     </div> -->
    <br><br><br>
         <div class="image-upload" float-right>
     <label for="file-input">
@@ -52,6 +52,12 @@
               <ion-icon name="camera"></ion-icon>  
             </ion-button>   
           <ion-input [(ngModel)]="message" class="message-editor" placeholder="Type a message"></ion-input>
+
+          <div class="image-upload" float-right>
+            <label for="file-input" (change)="upload($event)" color="light">
+                <ion-icon color="light" name="attach"> </ion-icon>
+          </label>
+         </div>
      
           <ion-button color="light" float-right class="message-editor-button" (click)="send()">
             <ion-icon name="send"></ion-icon>

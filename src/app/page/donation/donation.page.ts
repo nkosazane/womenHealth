@@ -49,6 +49,10 @@ export class DonationPage implements OnInit {
     this.router.navigateByUrl('donation-item')
   }
 
+  back(){
+    this.router.navigateByUrl('chat-forum')
+  }
+
  
 //   CreateRecord() {
 //     let record = {};

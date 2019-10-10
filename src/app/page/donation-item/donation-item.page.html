@@ -1,14 +1,17 @@
-<ion-header>
-    <ion-toolbar>
-      <ion-title></ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <br>
-  <br>
-  <ion-content padding>
-  
-    
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content padding>
+
+    <label float-left (click)="back()" >
+        <ion-icon name="arrow-back" ></ion-icon>
+      </label>
+      <br>
+      <br>
     <table>
     <tr>
   
@@ -106,6 +109,6 @@
                 </label> -->
               </table>
   
-              <ion-button expand="block" color="medium" (click)="onsubmit()" >Submit</ion-button>
+              <ion-button expand="block" color="secondary" (click)="onsubmit()" >Submit</ion-button>
   </ion-content>
   

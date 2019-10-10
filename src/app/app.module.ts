@@ -24,6 +24,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Camera } from '@ionic-native/camera/ngx';
 
 
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
   authDomain: "womanhealth-a607a.firebaseapp.com",
@@ -49,7 +51,8 @@ const firebaseConfig = {
       AngularFireAuthModule,
       AngularFirestoreModule,
       AngularFireStorageModule,
-      ExampleModalPageModule
+      ExampleModalPageModule,
+    
     ],
   providers: [
     StatusBar,

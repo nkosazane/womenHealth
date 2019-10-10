@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-donation-item',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonationItemPage implements OnInit {
 
-  constructor() { }
+  name = new FormControl('');
+  Surname = new FormControl('');
+  Age= new FormControl('');
+  ContactNumber = new FormControl('');
+  Donationtype = new FormControl('');
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  back(){
+    this.router.navigateByUrl('donation')
   }
 
 }

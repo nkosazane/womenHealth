@@ -1,48 +1,65 @@
-ion-content {
-    --ion-background-color:hsl(335, 100%, 88%);
-  }
+// ion-content {
+//     --ion-background-color:hsl(335, 100%, 88%);
+//   }
   
   
-  .md-donation-cont {
-    height: 100%;
-  }
+//   .md-donation-cont {
+//     height: 100%;
+//   }
   
-  .md-donation {
-    // background: #db6fa5;
-    min-height: 100%;
-    position: relative;
-  }
+//   .md-donation {
+//     // background: #db6fa5;
+//     min-height: 100%;
+//     position: relative;
+//   }
   
-  .md-donation .md-header {
-    color: black;
-    font-size: large;
-    text-align: left;
-    padding: 60px 0 20px 0;
-  }
+//   .md-donation .md-header {
+//     color: black;
+//     font-size: large;
+//     text-align: left;
+//     padding: 60px 0 20px 0;
+//   }
   
-  .md-donation .md-heart {
-    width: 100%;
-    padding-bottom: 50px;
-  }
+//   .md-donation .md-heart {
+//     width: 100%;
+//     padding-bottom: 50px;
+//   }
   
-  .md-donation .md-donate-padding {
-    padding: 2em 2em 6.5em 2em;
-  }
+//   .md-donation .md-donate-padding {
+//     padding: 2em 2em 6.5em 2em;
+//   }
   
-  /* button */
+//   /* button */
   
-  .md-donation .md-btn-cont {
+//   .md-donation .md-btn-cont {
+//     overflow: hidden;
+//     text-align: center;
+//   }
+  
+//   h1{
+//     text-align: center;
+//     font-size: larger;
+//   }
+//   h2{
+//   text-align:center;
+//   font-size: medium;
+//   }
+  
+  
+.welcome-card {
+  max-width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  ion-img {
+    max-height: 35vh;
     overflow: hidden;
-    text-align: center;
   }
-  
-  h1{
-    text-align: center;
-    font-size: larger;
+  ion-card-header {
+    max-width: 30vw;
+    margin: auto;
   }
-  h2{
-  text-align:center;
-  font-size: medium;
+  ion-card-content {
+    max-width: 30vw;
+    margin: auto;
   }
-  
-  
+}

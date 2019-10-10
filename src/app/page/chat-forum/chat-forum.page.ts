@@ -7,6 +7,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import * as firebase from 'firebase'
 import { finalize } from 'rxjs/operators';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat-forum',
@@ -26,7 +27,8 @@ export class ChatForumPage implements OnInit {
   constructor(private camera: Camera,
     public Storage: AngularFireStorage,
     public afAuth: AngularFireAuth,  private angularfire: AngularFirestore,
-    public actionSheetController: ActionSheetController,private fb: FormBuilder ) {
+    public actionSheetController: ActionSheetController,private fb: FormBuilder,
+  private router: Router ) {
 
     this.key = this.afAuth.auth.currentUser.uid;
     this.chatRef = this.angularfire.collection('chats',ref=>ref.orderBy('TimeStamp')).valueChanges();
@@ -84,6 +86,10 @@ export class ChatForumPage implements OnInit {
      let base64Image = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
     });
+  }
+
+  back(){
+    this.router.navigateByUrl('donation')
   }
   
 }
