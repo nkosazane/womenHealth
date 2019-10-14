@@ -10,16 +10,10 @@
 </ion-header>
 <ion-content>
 
-   <div *ngFor="let donate of users |  async">
-    {{donate.location}}
+   <div *ngFor="let item of donateList">
+    {{item?.location}}
     <br>
-  {{donate.name}}
-  <br>
-  {{donate.name}}
-  <br>
-  {{donate.surname}}
-  <br>
-  {{donate.type}}
+
  </div>
  
 </ion-content>

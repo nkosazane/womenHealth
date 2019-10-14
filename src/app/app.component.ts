@@ -10,16 +10,16 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   public appPages = [
-    {
-      title: 'Paypal for Apps',
-      url: '/paypal',
-      icon: 'card'
-    },
-    {
-      title: 'Paypal for PWA',
-      url: '/paypalweb',
-      icon: 'ios-card'
-    },
+    // {
+    //   title: 'Paypal for Apps',
+    //   url: '/paypal',
+    //   icon: 'card'
+    // },
+    // {
+    //   title: 'Paypal for PWA',
+    //   url: '/paypalweb',
+    //   icon: 'ios-card'
+    // },
     {
       title: 'Chat-forum',
       url: '/chat-forum',
