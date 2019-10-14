@@ -10,5 +10,15 @@
 </ion-header>   
 
 <ion-content>
+  <ion-button  (click)=" addVideo(vid)">Add Video</ion-button><br>
+
+  <!-- <ion-button  (click)="uploadVideo(event, vid)">Upload</ion-button><br> -->
+
+  <label for="file-input">
+      <ion-icon class="input" name="attach"> </ion-icon>
+  
+  <input id="file-input" class="input" type="file" (change)="uploadVideo($event, vid)" /> 
+</label>
+
 
 </ion-content>

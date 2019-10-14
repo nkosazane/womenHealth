@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PayPal } from '@ionic-native/paypal/ngx';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuth } from '@angular/fire/auth';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-donation-money',
@@ -8,12 +11,16 @@ import { PayPal } from '@ionic-native/paypal/ngx';
   styleUrls: ['./donation-money.page.scss'],
 })
 export class DonationMoneyPage implements OnInit {
+
+  donation = {} as Donation;
+
   paymentAmount: string = '3.33';
   currency: string = 'USD';
   currencyIcon: string = '$';
 
   constructor(private router: Router,
-  private paypal:PayPal,
+  private paypal:PayPal,private angularfire:  AngularFirestore,
+  private afAuth: AngularFireAuth
   ) {
     let _this = this;
     setTimeout(() => {
@@ -50,6 +57,22 @@ export class DonationMoneyPage implements OnInit {
 
   ngOnInit() {
   }
+
+  form(donation: Donation){
+    const userid = this.afAuth.auth.currentUser.uid;
+   
+       this.angularfire.collection('donation/donators/'+userid).add({
+         Userid:this.afAuth.auth.currentUser.uid,
+         name: donation.name,
+         surname: donation.surname,
+         location: donation.location,
+         TimeStamp:firebase.firestore.FieldValue.serverTimestamp(),
+         type: donation.type
+       }).then (() =>{
+         this.router.navigateByUrl('donation');
+       })
+   
+     }
 
   back(){
     this.router.navigateByUrl('donation')

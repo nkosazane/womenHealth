@@ -14,7 +14,9 @@ const routes: Routes = [
   { path: 'donation-money', loadChildren: './page/donation-money/donation-money.module#DonationMoneyPageModule' },
   { path: 'video-tutorials', loadChildren: './page/video-tutorials/video-tutorials.module#VideoTutorialsPageModule' },  { path: 'profile', loadChildren: './page/profile/profile.module#ProfilePageModule' },
   { path: 'paypal', loadChildren: './page/paypal/paypal.module#PaypalPageModule' },
-  { path: 'paypalweb', loadChildren: './page/paypalweb/paypalweb.module#PaypalwebPageModule' }
+  { path: 'paypalweb', loadChildren: './page/paypalweb/paypalweb.module#PaypalwebPageModule' },
+  { path: 'chat-forum1', loadChildren: './page/chat-forum1/chat-forum1.module#ChatForum1PageModule' },
+  { path: 'chat-forum2', loadChildren: './page/chat-forum2/chat-forum2.module#ChatForum2PageModule' }
 
 
 

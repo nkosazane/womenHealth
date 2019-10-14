@@ -17,108 +17,28 @@
 
 <ion-content padding>
 
-    <label float-left (click)="back()" >
-        <ion-icon name="arrow-back" ></ion-icon>
-      </label>
-      <br>
-      <br>
-    <table>
-    <tr>
-  
-     <td>
-          Name:
-      </td>
-   
-      <td>
-        <input type="text" [formControl]="name">
-      
-    </td>
-  </tr>
-  <br>
-  <tr>
-  
-      <td>
-          Surname:
-       </td>
-    
-       <td>
-         <input type="text" [formControl]="Surname">
-       
-     </td>
-   </tr>
-   <br>
-   <tr>
-  
-      <td>
-           Age:
-       </td>
-    
-       <td>
-         <input type="number" [formControl]="Age">
-       
-     </td>
-   </tr>
-   <br>
-   <tr>
-  
-      <td>
-          Contact Number:
-       </td>
-    
-       <td>
-         <input type="number" [formControl]=" ContactNumber">
-       
-     </td>
-   </tr>
-   <br>
-   <tr>
-  
-      <td>
-        Donate Type:
-       </td>
-    
-       <td>
-         <input type="text" [formControl]=" Donationtype">
-       
-     </td>
-   </tr>
-  
-  
-  
-   <br>
-   <br>
-   <br>
-  
-      <!-- <label>
-          
-       
-        </label>
-        <br>
-        <br>
-        <label>
-            Surname:
-            <input type="text" [formControl]="Surname">
-          </label>
-          <br>
-          <br>
-          <label>
-              Age:
-              <input type="text" [formControl]="Age">
-            </label>
-            <br>
-            <br>
-            <label>
-                Contact Number:
-                <input type="text" [formControl]="ContactNumber">
-              </label>
-              <br>
-              <br>
-              <label>
-                  Donation Type:
-                  <input type="text" [formControl]=" Donationtype">
-                </label> -->
-              </table>
-  
-              <ion-button expand="block" color="secondary" (click)="onsubmit()" >Submit</ion-button>
-  </ion-content>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label position="stacked">Name<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" [(ngModel)]="donation.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Surname<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" [(ngModel)]="donation.surname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Location<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" [(ngModel)]="donation.location"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Type<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" [(ngModel)]="donation.type"></ion-input>
+    </ion-item>
+  </ion-list>
+
+    <ion-button expand="block" color="medium" (click)="form(donation)" >Submit</ion-button>
+</ion-content>
   
