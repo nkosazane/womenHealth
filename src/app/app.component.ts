@@ -17,10 +17,32 @@ export class AppComponent {
     },
     {
       title: 'Paypal for PWA',
-      url: '/paypal-web',
+      url: '/paypalweb',
       icon: 'card'
-    }
+    },
+    {
+      title: 'Chat-forum',
+      url: '/chat-forum',
+      icon: 'card'
+    },
+    {
+      title: 'Donation',
+      url: '/donation',
+      icon: 'card'
+    },
+    {
+      title: 'Profile',
+      url: '/profile',
+      icon: 'card'
+    },
+    {
+      title: 'Video-tutorial',
+      url: '/video-tutorials',
+      icon: 'card'
+    },
   ];
+
+ 
 
   constructor(
     private platform: Platform,
