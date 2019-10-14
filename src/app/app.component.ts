@@ -18,17 +18,17 @@ export class AppComponent {
     {
       title: 'Paypal for PWA',
       url: '/paypalweb',
-      icon: 'card'
+      icon: 'ios-card'
     },
     {
       title: 'Chat-forum',
       url: '/chat-forum',
-      icon: 'card'
+      icon: 'chatbubbles'
     },
     {
       title: 'Donation',
       url: '/donation',
-      icon: 'card'
+      icon: 'cash'
     },
     {
       title: 'Profile',
@@ -38,7 +38,7 @@ export class AppComponent {
     {
       title: 'Video-tutorial',
       url: '/video-tutorials',
-      icon: 'card'
+      icon: 'videocam'
     },
   ];
 
