@@ -25,22 +25,22 @@ export class VideoTutorialsPage implements OnInit {
   }
    ngOnInit(){}
 
-  uploadVideo(event, vid) {
+  uploadVideo(event) {
     const VideoName = this.makeid(10) + '.MKV';
   // this.afs.upload('/upload/to/this-path', event.target.files[0]);
  // const randomId = Math.random().toString(36).substring(2);
     const file = event.target.files[0];
     const filePath = 'uploads/videos/' + VideoName;
-    this.ref = this.afs.ref(filePath);
-    this.task = this.afs.upload(filePath, file);
-    vid.url = VideoName;
-    this.addVideo(vid);
-    return this.uploadProgress = this.task.percentageChanges();
+    const ref = this.afs.ref(filePath);
+    const task = ref.put(file);
+    // vid.url = VideoName;
+    // this.addVideo(vid);
+    return this.uploadProgress = task.percentageChanges();
  }
   retreiveVideo(video) {
    console.log(video);
    const ref = this.afs.ref('uploads/videos/' + video);
-   return    ref.getDownloadURL();
+   return ref.getDownloadURL();
  }
  makeid(length) {
    let result           = '';
