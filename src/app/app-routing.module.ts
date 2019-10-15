@@ -17,8 +17,12 @@ const routes: Routes = [
   { path: 'paypalweb', loadChildren: './page/paypalweb/paypalweb.module#PaypalwebPageModule' },
   { path: 'chat-forum1', loadChildren: './page/chat-forum1/chat-forum1.module#ChatForum1PageModule' },
   { path: 'chat-forum2', loadChildren: './page/chat-forum2/chat-forum2.module#ChatForum2PageModule' },
+<<<<<<< HEAD
   { path: 'period-tracker', loadChildren: './page/period-tracker/period-tracker.module#PeriodTrackerPageModule' },
   { path: 'logout', loadChildren: './page/logout/logout.module#LogoutPageModule' }
+=======
+  { path: 'drop-off', loadChildren: './page/drop-off/drop-off.module#DropOffPageModule' }
+>>>>>>> d88e5fd3d63457817aca5c9ae7110059bb1364f0
 
 
 
