@@ -3,13 +3,20 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AlertController } from '@ionic/angular';
+import * as firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private afs: AngularFirestore, private router: Router, public afAuth: AngularFireAuth, private alertCtrl : AlertController ) { 
+  userDetails(): any {
+    throw new Error("Method not implemented.");
+  }
+  constructor(private afs: AngularFirestore, 
+    private router: Router,
+     public afAuth: AngularFireAuth,
+      private alertCtrl : AlertController ) { 
     afAuth.auth.onAuthStateChanged((user)=>{
       // if(user){
       //   this.router.navigateByUrl("");
@@ -42,5 +49,21 @@ export class AuthService {
 
   async sendPasswordResetEmail(passwordResetEmail: string) {
     return await this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail);
+  }
+  async logout() {
+    return await this.afAuth.auth.signOut();
+  }
+  logoutUser(){
+    return new Promise((resolve, reject) => {
+      if(firebase.auth().currentUser){
+        firebase.auth().signOut()
+        .then(() => {
+          console.log("LOG Out");
+          resolve();
+        }).catch((error) => {
+          reject();
+        });
+      }
+    })
   }
 }

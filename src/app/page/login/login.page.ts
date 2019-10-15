@@ -13,9 +13,12 @@ export class LoginPage implements OnInit {
   public loginForm: FormGroup;
   public forgotpasswordForm: FormGroup;
   isForgotPassword: boolean = true;
+  userDetails: any;
   
-  constructor(private fb: FormBuilder, private router: Router, 
-    private authService: AuthService, private alertCtrl: AlertController) { 
+  constructor(private fb: FormBuilder,
+     private router: Router, 
+    private authService: AuthService,
+     private alertCtrl: AlertController) { 
 
     this.loginForm = fb.group({
       email: ['', Validators.compose([Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'), Validators.required])],

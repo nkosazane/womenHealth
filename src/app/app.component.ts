@@ -23,10 +23,24 @@ export class AppComponent {
     {
       title: 'Chat-forum',
       url: '/chat-forum',
-      icon: 'chatbubbles'
+      icon: 'chatbubbles',
+      subPages: [
+        {
+        title: 'Metenal health', 
+        url: '/chat-forum1',
+        icon:'ios-chatbubbles' 
+      },
+      {
+         title: 'Mammography',
+         url: '/chat-forum2',
+         icon:'chatbubbles'
+         },
+     
+     ]
     },
+   
     {
-      title: 'Donation',
+      title: 'Donate to woman in need',
       url: '/donation',
       icon: 'cash'
     },
@@ -40,6 +54,17 @@ export class AppComponent {
       url: '/video-tutorials',
       icon: 'videocam'
     },
+    {
+      title: 'Logout',
+      url: '/logout',
+      icon: 'log-out'
+    },
+    {
+      title: 'Period tracker',
+      url: '/period-tracker',
+      icon: 'analytics'
+    },
+  
   ];
 
  
