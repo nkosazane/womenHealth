@@ -10,31 +10,37 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   public appPages = [
+    // {
+    //   title: 'Paypal for Apps',
+    //   url: '/paypal',
+    //   icon: 'card'
+    // },
+    // {
+    //   title: 'Paypal for PWA',
+    //   url: '/paypalweb',
+    //   icon: 'ios-card'
+    // },
     {
-      title: 'Paypal for Apps',
-      url: '/paypal',
-      icon: 'card'
-    },
-    {
-      title: 'Paypal for PWA',
-      url: '/paypalweb',
-      icon: 'ios-card'
-    },
-    {
-      title: 'Chat-forum',
-      url: '/chat-forum',
+      title: 'Chat Forums',
       icon: 'chatbubbles',
       subPages: [
         {
-        title: 'Metenal health', 
+        title: 'Metenal Issue', 
         url: '/chat-forum1',
-        icon:'ios-chatbubbles' 
+        icon:'chatbubbles' 
       },
       {
          title: 'Mammography',
          url: '/chat-forum2',
          icon:'chatbubbles'
          },
+         {
+         title: 'Socio Issue',
+         url: '/chat-forum',
+         icon:'chatbubbles',
+         },
+
+         
      
      ]
     },
@@ -55,14 +61,14 @@ export class AppComponent {
       icon: 'videocam'
     },
     {
-      title: 'Logout',
-      url: '/logout',
-      icon: 'log-out'
-    },
-    {
       title: 'Period tracker',
       url: '/pariod-tracker',
       icon: 'analytics'
+    },
+    {
+      title: 'Logout',
+      url: '/logout',
+      icon: 'log-out'
     },
   
   ];

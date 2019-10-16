@@ -10,15 +10,66 @@
 </ion-header>   
 
 <ion-content>
-  <ion-button  (click)=" addVideo(vid)">Add Video</ion-button><br>
-
-  <!-- <ion-button  (click)="uploadVideo(event, vid)">Upload</ion-button><br> -->
+  <!-- <ion-button  (click)=" addVideo(vid)">Add Video</ion-button><br>
 
   <label for="file-input">
       <ion-icon class="input" name="attach"> </ion-icon>
   
   <input id="file-input" class="input" type="file" (change)="uploadVideo($event)" /> 
-</label>
+</label> -->
+
+<ion-searchbar animated 
+(ion-Change)="bucar(event)">
+</ion-searchbar> 
+<br>
+<header>
+<h2><b><i>#Women's health issues</i></b></h2>
+</header>
+
+<br>
+
+
+<nav>
+
+<ul> 
+<li><a href="Breast Cancer">Breast Cancer</a></li> 
+<li><a href="Maternal health">Maternal health</a></li>
+<li><a href="Period">Period</a></li>
+</ul>
+</nav>
+<br>
+
+<img src="../../../assets/vignette-focus.jpg" class="gift" /> 
+<br><br>
+
+<!-- <ion-button color="primary" expland="full" (click)="startVideo()">start video</ion-button> -->
+
+<p><span id="more"> <b>Breast Cancer:</b>Two of the most common cancers affecting women are breast and cervical cancers. Detecting both these
+cancers early is key to keeping women alive and healthy. 
+The latest global figures show that around half a million women die from
+cervical cancer and half a million from breast cancer each year.<span id="dots">...</span></span></p>
+<a name="Breast Cancer">Breast Cancer</a>
+<hr>
+
+
+
+
+
+<img src="../../../assets/menstrual.jpg" class="gift" />  
+<br>
+<p><span id="more"><b>Regular periods are a sign that your body is working normally.</b> You should have regular periods unless you are pregnant, breastfeeding, postmenopausal, or have a medical condition that causes your periods to stop. Irregular, painful, or heavy periods may be signs of a serious health problem. Irregular periods also can make it harder to get
+Your doctor can work with you to help get your periods more regular.<span id="dots">...</span></span></p>
+<br>
+<img src="../../../assets/martenal.jpg" class="gift" /> 
+<br>
+<br>
+<p><b>Maternal health</b>: Many women are now benefitting from massive improvements in care during pregnancy and childbirth introduced in the last century.
+But those benefits do not extend everywhere and in 2013, almost 300 000 women died from complications in pregnancy and childbirth. Most of these deaths could have been prevented,
+had access to family planning and to some quite basic services been in place.<span id="dots">...</span> </p> 
+
+
+<p><b>Please click here for more!</b></p>
+<ion-button expand="block" color="medium" (click)="clickhere()" >click here!</ion-button>
 
 
 </ion-content>

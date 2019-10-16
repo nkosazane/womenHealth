@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'chat-forum1', loadChildren: './page/chat-forum1/chat-forum1.module#ChatForum1PageModule' },
   { path: 'chat-forum2', loadChildren: './page/chat-forum2/chat-forum2.module#ChatForum2PageModule' },
   { path: 'logout', loadChildren: './page/logout/logout.module#LogoutPageModule' },
-  { path: 'drop-off', loadChildren: './page/drop-off/drop-off.module#DropOffPageModule' },  { path: 'pariod-tracker', loadChildren: './page/pariod-tracker/pariod-tracker.module#PariodTrackerPageModule' }
+  { path: 'drop-off', loadChildren: './page/drop-off/drop-off.module#DropOffPageModule' },
+  { path: 'pariod-tracker', loadChildren: './page/pariod-tracker/pariod-tracker.module#PariodTrackerPageModule' }
 
 
 
