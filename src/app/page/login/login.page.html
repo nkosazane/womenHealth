@@ -28,6 +28,9 @@
                 <ion-label position="floating">Password</ion-label>
                 <ion-input type="password" formControlName="password"></ion-input>
             </ion-item>
+
+            <br>
+            <br>
   
             <div class="error" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
                 Please input your password
@@ -63,7 +66,7 @@
         
         <br>
         
-        <ion-button expand="block" color="medium" [disabled]="!loginForm.valid" (click)="loginUser()">Sign In</ion-button>
+        <ion-button expand="block" color="secondary" [disabled]="!loginForm.valid" (click)="loginUser()">Sign In</ion-button>
         
         </div>
       </div>
@@ -92,10 +95,10 @@
             <ion-grid>
                 <ion-row>
                     <ion-col>
-                        <ion-button expand="block" color="medium" (click)="Cancel()">Cancel</ion-button>
+                        <ion-button expand="block" color="secondary" (click)="Cancel()">Cancel</ion-button>
                     </ion-col>
                     <ion-col>
-                        <ion-button expand="block" color="medium" [disabled]="!forgotpasswordForm.valid" (click)="reset()">Reset</ion-button>
+                        <ion-button expand="block" color="secondary" [disabled]="!forgotpasswordForm.valid" (click)="reset()">Reset</ion-button>
                     </ion-col>
                 </ion-row>
             </ion-grid>

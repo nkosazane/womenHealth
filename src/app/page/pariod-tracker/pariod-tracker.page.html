@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color ="primary">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -24,7 +24,7 @@
 </ion-header>
 <ion-content> -->
 
-<ion-content>
+<ion-content padding class="background-image">
 
 
   
@@ -84,11 +84,15 @@
       </ion-button>
     </ion-col>
   </ion-row>
-  <h3>when was the first day of your last period?</h3>
 
-  <ion-button color="medium"> Next</ion-button>
-  
-  <calendar 
+  <h3>When was the first day of your last period?</h3>
+
+  <ion-button expand="full" color="secondary"> Next</ion-button>
+  <br>
+  <br>
+  <div class="container">
+  <calendar  class="calendar"
+
   [eventSource]="eventSource" 
   [calendarMode]="calendar.mode" 
   [currentDate]="calendar.currentDate"
@@ -99,8 +103,12 @@
   endHour="20"
   step="30"
   startingDayWeek="1">
+
   </calendar>
- 
+  </div>
+  <br>
+  <br><br>
+  <br>
   <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">Slide 1</div>
