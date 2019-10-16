@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'chat-forum2', loadChildren: './page/chat-forum2/chat-forum2.module#ChatForum2PageModule' },
   { path: 'logout', loadChildren: './page/logout/logout.module#LogoutPageModule' },
   { path: 'drop-off', loadChildren: './page/drop-off/drop-off.module#DropOffPageModule' },
-  { path: 'pariod-tracker', loadChildren: './page/pariod-tracker/pariod-tracker.module#PariodTrackerPageModule' }
+  { path: 'pariod-tracker', loadChildren: './page/pariod-tracker/pariod-tracker.module#PariodTrackerPageModule' },
+  { path: 'slides', loadChildren: './page/slides/slides.module#SlidesPageModule' }
 
 
 
