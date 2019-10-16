@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,7 @@ export class AppComponent {
       icon: 'chatbubbles',
       subPages: [
         {
-        title: 'Metenal Issue', 
+        title: 'Maternal Issue', 
         url: '/chat-forum1',
         icon:'chatbubbles' 
       },
@@ -65,20 +66,19 @@ export class AppComponent {
       url: '/pariod-tracker',
       icon: 'analytics'
     },
-    {
-      title: 'Logout',
-      url: '/logout',
-      icon: 'log-out'
-    },
+    // {
+    //   title: 'Logout',
+    //   url: '/logout',
+    //   icon: 'log-out'
+    // },
 
   ];
-
- 
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar, 
+    private authService: AuthService,
   ) {
     this.initializeApp();
   }
@@ -88,5 +88,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  log() {
+    this.authService.logout();
   }
 }

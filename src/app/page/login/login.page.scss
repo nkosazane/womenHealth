@@ -1,7 +1,10 @@
-.background-image {
-  --background: url('../../../assets/back.jpg')0 0/100% 100%  no-repeat;
-}
+// .background-image {
+//   --background: url('../../../assets/back.jpg')0 0/100% 100%  no-repeat;
+// }
 
+ion-content {
+  --ion-background-color:#db6fa5 ;
+}
 .Capture {
 vertical-align: middle;
 border-radius: 50%;

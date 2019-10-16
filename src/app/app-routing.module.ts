@@ -6,7 +6,6 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'login', loadChildren: './page/login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './page/register/register.module#RegisterPageModule' },
-  // { path: 'recover', loadChildren: './page/recover/recover.module#RecoverPageModule' },
   { path: 'donation', loadChildren: './page/donation/donation.module#DonationPageModule' },
   { path: 'chat-forum', loadChildren: './page/chat-forum/chat-forum.module#ChatForumPageModule' },
   { path: 'example-modal', loadChildren: './page/example-modal/example-modal.module#ExampleModalPageModule' },
@@ -18,7 +17,6 @@ const routes: Routes = [
   { path: 'paypalweb', loadChildren: './page/paypalweb/paypalweb.module#PaypalwebPageModule' },
   { path: 'chat-forum1', loadChildren: './page/chat-forum1/chat-forum1.module#ChatForum1PageModule' },
   { path: 'chat-forum2', loadChildren: './page/chat-forum2/chat-forum2.module#ChatForum2PageModule' },
-  { path: 'logout', loadChildren: './page/logout/logout.module#LogoutPageModule' },
   { path: 'drop-off', loadChildren: './page/drop-off/drop-off.module#DropOffPageModule' },
   { path: 'pariod-tracker', loadChildren: './page/pariod-tracker/pariod-tracker.module#PariodTrackerPageModule' },
   { path: 'slides', loadChildren: './page/slides/slides.module#SlidesPageModule' }
