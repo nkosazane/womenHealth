@@ -2,7 +2,7 @@
   <ion-menu contentId="content" side="start">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Manu</ion-title>
+        <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -24,6 +24,14 @@
             </ion-menu-toggle>
           </ion-list>
         </ion-menu-toggle>
+
+        <ion-item>
+            <ion-icon  slot="start" name="log-out" (click)="log()"></ion-icon>
+            <ion-label (click)="log()">
+                Logout
+            </ion-label>
+        </ion-item>
+
       </ion-list>
     </ion-content>
   </ion-menu>
