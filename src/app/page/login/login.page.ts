@@ -35,7 +35,7 @@ export class LoginPage implements OnInit {
 
   loginUser(){
     this.authService.login(this.loginForm.value.email, this.loginForm.value.password).then(() =>{
-      this.router.navigateByUrl('chat-forum')
+      this.router.navigateByUrl('pariod-tracker')
     }).catch(err=>{
       alert(err.message)
     })

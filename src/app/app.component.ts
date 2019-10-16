@@ -25,7 +25,7 @@ export class AppComponent {
       icon: 'chatbubbles',
       subPages: [
         {
-        title: 'Metenal Issue', 
+        title: 'Maternal Issue', 
         url: '/chat-forum1',
         icon:'chatbubbles' 
       },
