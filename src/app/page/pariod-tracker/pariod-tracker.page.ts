@@ -7,11 +7,11 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-period-tracker',
-  templateUrl: './period-tracker.page.html',
-  styleUrls: ['./period-tracker.page.scss'],
+  selector: 'app-pariod-tracker',
+  templateUrl: './pariod-tracker.page.html',
+  styleUrls: ['./pariod-tracker.page.scss'],
 })
-export class PeriodTrackerPage implements OnInit {
+export class PariodTrackerPage implements OnInit {
   event = {
     title: '',
     desc: '',
@@ -31,18 +31,15 @@ export class PeriodTrackerPage implements OnInit {
   };
  
   @ViewChild(CalendarComponent) myCal: CalendarComponent;
-  constructor(
-    private alertCtrl: AlertController,
+
+  constructor(   private alertCtrl: AlertController,
     // private youtube: YoutubeVideoPlayer,
     private router: Router,
-     @Inject(LOCALE_ID) private locale: string
-  ) { }
-
+     @Inject(LOCALE_ID) private locale: string) { }
 
   ngOnInit() {
     this.resetEvent();
   }
-  
   resetEvent() {
     this.event = {
       title: '',

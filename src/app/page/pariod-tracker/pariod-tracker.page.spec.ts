@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PeriodTrackerPage } from './period-tracker.page';
+import { PariodTrackerPage } from './pariod-tracker.page';
 
-describe('PeriodTrackerPage', () => {
-  let component: PeriodTrackerPage;
-  let fixture: ComponentFixture<PeriodTrackerPage>;
+describe('PariodTrackerPage', () => {
+  let component: PariodTrackerPage;
+  let fixture: ComponentFixture<PariodTrackerPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PeriodTrackerPage ],
+      declarations: [ PariodTrackerPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PeriodTrackerPage);
+    fixture = TestBed.createComponent(PariodTrackerPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

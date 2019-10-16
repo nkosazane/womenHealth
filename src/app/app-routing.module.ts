@@ -12,17 +12,15 @@ const routes: Routes = [
   { path: 'example-modal', loadChildren: './page/example-modal/example-modal.module#ExampleModalPageModule' },
   { path: 'donation-item', loadChildren: './page/donation-item/donation-item.module#DonationItemPageModule' },
   { path: 'donation-money', loadChildren: './page/donation-money/donation-money.module#DonationMoneyPageModule' },
-  { path: 'video-tutorials', loadChildren: './page/video-tutorials/video-tutorials.module#VideoTutorialsPageModule' },  { path: 'profile', loadChildren: './page/profile/profile.module#ProfilePageModule' },
+  { path: 'video-tutorials', loadChildren: './page/video-tutorials/video-tutorials.module#VideoTutorialsPageModule' },
+  { path: 'profile', loadChildren: './page/profile/profile.module#ProfilePageModule' },
   { path: 'paypal', loadChildren: './page/paypal/paypal.module#PaypalPageModule' },
   { path: 'paypalweb', loadChildren: './page/paypalweb/paypalweb.module#PaypalwebPageModule' },
   { path: 'chat-forum1', loadChildren: './page/chat-forum1/chat-forum1.module#ChatForum1PageModule' },
   { path: 'chat-forum2', loadChildren: './page/chat-forum2/chat-forum2.module#ChatForum2PageModule' },
-<<<<<<< HEAD
-  { path: 'period-tracker', loadChildren: './page/period-tracker/period-tracker.module#PeriodTrackerPageModule' },
-  { path: 'logout', loadChildren: './page/logout/logout.module#LogoutPageModule' }
-=======
-  { path: 'drop-off', loadChildren: './page/drop-off/drop-off.module#DropOffPageModule' }
->>>>>>> d88e5fd3d63457817aca5c9ae7110059bb1364f0
+  { path: 'logout', loadChildren: './page/logout/logout.module#LogoutPageModule' },
+  { path: 'drop-off', loadChildren: './page/drop-off/drop-off.module#DropOffPageModule' },  { path: 'pariod-tracker', loadChildren: './page/pariod-tracker/pariod-tracker.module#PariodTrackerPageModule' }
+
 
 
 

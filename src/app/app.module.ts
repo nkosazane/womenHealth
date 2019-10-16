@@ -51,7 +51,7 @@ const firebaseConfig = {
       AngularFireAuthModule,
       AngularFirestoreModule,
       AngularFireStorageModule,
-      ExampleModalPageModule,
+      ExampleModalPageModule
     
     ],
   providers: [

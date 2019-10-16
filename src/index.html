@@ -27,7 +27,16 @@
 
     <app-root></app-root>
 <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
-    
+
+<script src="../package/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script> 
 <!-- 
     <script type="text/javascript">
   var amount;
