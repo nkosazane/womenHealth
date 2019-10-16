@@ -50,20 +50,14 @@ export class AuthService {
   async sendPasswordResetEmail(passwordResetEmail: string) {
     return await this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail);
   }
-  async logout() {
-    return await this.afAuth.auth.signOut();
-  }
-  logoutUser(){
-    return new Promise((resolve, reject) => {
-      if(firebase.auth().currentUser){
-        firebase.auth().signOut()
-        .then(() => {
-          console.log("LOG Out");
-          resolve();
-        }).catch((error) => {
-          reject();
-        });
-      }
+ 
+  async logout(){
+    await this.afAuth.auth.signOut().then((success)=>{
+      console.log(success);
+      console.log("success");
+      this.router.navigateByUrl("login");
+    }).catch((error)=>{
+      console.log(error)
     })
   }
 }
