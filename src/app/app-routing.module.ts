@@ -21,9 +21,6 @@ const routes: Routes = [
   { path: 'pariod-tracker', loadChildren: './page/pariod-tracker/pariod-tracker.module#PariodTrackerPageModule' },
   { path: 'slides', loadChildren: './page/slides/slides.module#SlidesPageModule' }
 
-
-
-
 ];
 
 @NgModule({
