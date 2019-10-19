@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tracker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+          <ion-label position="stacked">Last Period Date<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="Date" [(ngModel)]="periods.lastDate"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Period Cycle Days<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="number" [(ngModel)]="periods.PeriodCycleDays"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label position="stacked">Bleeding Days<ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="number" [(ngModel)]="periods.bleedingDays"></ion-input>
+            </ion-item>
+
+            <!-- <ion-item>
+                <ion-label position="stacked">Fertile Start<ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="number" [(ngModel)]="{{periods.fertilePhaseStart}}"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label position="stacked">Fertile Start<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input required type="number" [(ngModel)]="{{periods.fertilePhaseEnd}}"></ion-input>
+                </ion-item> -->
+
+        </ion-list>
+
+        <div class="ion-padding">
+            <ion-button expand="block" type="submit" class="ion-no-margin" (click)="tracker(periods)">Create account</ion-button>
+          </div>
+
+          
+
+
+</ion-content>

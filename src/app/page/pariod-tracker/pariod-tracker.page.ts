@@ -4,7 +4,7 @@ import { Component, ViewChild, OnInit, Inject, LOCALE_ID } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { formatDate } from '@angular/common';
 import { Router } from '@angular/router';
-
+import * as $ from 'jquery'
 declare  var jQuery:  any;
 
 @Component({
@@ -83,16 +83,16 @@ export class PariodTrackerPage implements OnInit {
       
       var InitialEvents = createEventsForDate(periodStartDate);
   
-      $("#calendar").jqmCalendar({
-          events: InitialEvents,
-          months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-          days: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-          startOfWeek: 0
-      }).bind('change', function(ev){
-          var calendarDate = $(this).data("jqm-calendar").settings.date;
-          var firstDayOfMonthForCalendarDate = new Date(calendarDate.getFullYear(), calendarDate.getMonth(), 1);
-          $(this).data("jqm-calendar").settings.events = createEventsForDate(firstDayOfMonthForCalendarDate);
-      });
+      // $("#calendar").jqmCalendar({
+      //     events: InitialEvents,
+      //     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      //     days: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+      //     startOfWeek: 0
+      // }).bind('change', function(ev){
+      //     var calendarDate = $(this).data("jqm-calendar").settings.date;
+      //     var firstDayOfMonthForCalendarDate = new Date(calendarDate.getFullYear(), calendarDate.getMonth(), 1);
+      //     $(this).data("jqm-calendar").settings.events = createEventsForDate(firstDayOfMonthForCalendarDate);
+      // });
   });
                  
   function addDays(date, days){
