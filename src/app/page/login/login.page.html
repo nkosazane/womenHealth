@@ -7,11 +7,8 @@
     <form class="form" [formGroup]="loginForm" *ngIf="isForgotPassword">
       <div class="forms">
         <div class="form">
-  
           <br>
-          <br>
-
-          <ion-card color="none">
+          <ion-card color="secondary">
             <ion-item >
                 <ion-label position="floating">Email</ion-label>
                 <ion-input type="email" formControlName="email"></ion-input>
@@ -30,8 +27,6 @@
             </ion-item>
 
             <br>
-            <br>
-  
             <div class="error" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
                 Please input your password
             </div>
@@ -54,19 +49,19 @@
   
             <ion-row align-items-center>
               <div text-center>
-            <a routerLink='/register'>Don't have an account yet? Sign up.</a> 
+            <a routerLink='/register'class="Do">Don't have an account yet? Sign up.</a> 
               </div>
           </ion-row>
           <br>
         
-          <ion-row  align-items-center>
+          <ion-row class="text">
         
             <a text-center (click)="forgotpassword()">Forgot password?</a>
         </ion-row>
         
         <br>
         
-        <ion-button expand="block" color="secondary" [disabled]="!loginForm.valid" (click)="loginUser()">Sign In</ion-button>
+        <ion-button expand="block" color="medium" [disabled]="!loginForm.valid" (click)="loginUser()">Sign In</ion-button>
         
         </div>
       </div>

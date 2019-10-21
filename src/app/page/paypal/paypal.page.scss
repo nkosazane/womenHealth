@@ -1,5 +1,13 @@
 .welcome-card ion-img {
-    max-height: 35vh;
+    max-height: 32vh;
     overflow: hidden;
   }
-  
+  ion-content {
+    --ion-background-color:#db6fa5 ;
+  }
+  ion-col{
+  color:black;
+  }
+  .background-image {
+    --background: url('../../../assets/Background2.jpg')0 0/100% 100%  no-repeat;
+   }

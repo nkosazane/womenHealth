@@ -36,7 +36,7 @@ export class AppComponent {
          icon:'chatbubbles'
          },
          {
-         title: 'Socio Issue',
+         title: 'Cancer Issue',
          url: '/chat-forum',
          icon:'chatbubbles',
          },

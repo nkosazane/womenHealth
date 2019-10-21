@@ -1,17 +1,23 @@
-// .background-image {
-//   --background: url('../../../assets/back.jpg')0 0/100% 100%  no-repeat;
-// }
+.background-image {
+  --background: url('../../../assets/Background2.jpg')0 0/100% 100%  no-repeat;
+}
 
 ion-content {
   --ion-background-color:#db6fa5 ;
 }
 .Capture {
 vertical-align: middle;
-border-radius: 50%;
+border-radius: 60%;
 }
 a{
-  color:blue;
+  color:black;
 }
 ion-card{
  --ion-background-color:none;
+}
+.text{
+  margin-left: 240px;
+}
+.Do{
+  margin-left: 110px;
 }

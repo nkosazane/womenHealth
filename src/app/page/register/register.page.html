@@ -10,7 +10,7 @@
     <br>
     <br>
     <br>
-    <ion-card>
+    <ion-card color="secondary">
     <form [formGroup]="register" class="form">
       <div class="forms">
         <div class="form">
@@ -90,9 +90,11 @@
   <br><br>
   <ion-row align-items-center>
         <div text-center>
-      <a routerLink='/login' color="primary">have an account ? Sign in.</a> 
+      <a routerLink='/login' color="dark">You have an account ? Sign in.</a> 
         </div>
     </ion-row>
+    <br>
+    <br>
   <ion-button expand="block" color="medium" [disabled]="!register.valid" (click)="registerUser()">Register</ion-button>
   </ion-content>
   
