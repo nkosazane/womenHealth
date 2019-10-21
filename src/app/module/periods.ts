@@ -4,6 +4,6 @@ class Periods {
     bleedingDays: number;
     fertilePhaseStart: number;
     fertilePhaseEnd: number;
-    ovulation: Date;
+    // ovulation: Date;
     periodStartDate: Date;
 }
