@@ -2,15 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
-
-// let calendar = new Calendar(calendarEl, {
-//   plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ]
-// });
-
 @Component({
   selector: 'app-tracker',
   templateUrl: './tracker.page.html',
@@ -35,7 +26,7 @@ export class TrackerPage implements OnInit {
       fertilePhaseStart: this.periods.PeriodCycleDays - 20,
       fertilePhaseEnd: this.periods.PeriodCycleDays - 11,
       ovulation: (this.periods.fertilePhaseStart - 1) + (this.periods.fertilePhaseEnd - this.periods.fertilePhaseStart)/2,
-      periodStart: this.periods.periodStartDate = new Date()
+      periodStart: this.periods.periodStartDate = new Date(Date.UTC(2014, 4, 9))
     });
     console.log(this.periods.periodStartDate)
   }
