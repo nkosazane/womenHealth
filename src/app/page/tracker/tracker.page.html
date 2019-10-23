@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tracker</ion-title>
+    <ion-title>Period Calculator</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,16 +18,14 @@
           </ion-item>
 
           <ion-item>
-              <ion-label position="stacked">Bleeding Days<ion-text color="danger">*</ion-text></ion-label>
+              <ion-label position="stacked">Flow Days<ion-text color="danger">*</ion-text></ion-label>
               <ion-input required type="number" [(ngModel)]="periods.bleedingDays"></ion-input>
             </ion-item>
 
         </ion-list>
 
         <div class="ion-padding">
-            <ion-button expand="block" type="submit" class="ion-no-margin" (click)="tracker(periods)">Submit</ion-button>
+            <ion-button expand="block" type="submit" class="ion-no-margin" (click)="tracker(periods)">Track Now</ion-button>
           </div> 
-
-       
 
 </ion-content>
