@@ -8,20 +8,33 @@
     </ion-title>
   </ion-toolbar>
  </ion-header>
- <ion-content>
-   <!-- <div *ngFor="let item of donateList">
-    {{item?.location}}
-    <br> -->
-    {{userList?.displayName}}   
+
+ <ion-content padding class="background-image">
+    <ion-item color="secondary">
+      <ion-label>Name:</ion-label>
+      {{userList?.displayName}}
+  </ion-item>
     <br>
+    <ion-item color="secondary">
+      <ion-label>Age:</ion-label>
     {{userList?.age}}
+  </ion-item>
     <br>
+    <ion-item color="secondary">
+      <ion-label>Gender:</ion-label>
     {{userList?.gender}}
+  </ion-item>
     <br>
+    <ion-item color="secondary">
+      <ion-label>Email:</ion-label>
     {{userList?.email}}
+  </ion-item>
     <br>
+    <ion-item color="secondary">
+      <ion-label>User ID:</ion-label>
     {{userList?.userid}}
- <!-- </div> -->
+  </ion-item>
+
  <br>
  <br>
  

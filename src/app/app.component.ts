@@ -28,7 +28,7 @@ export class AppComponent {
         {
         title: 'Maternal Issue', 
         url: '/chat-forum1',
-        icon:'chatbubbles', 
+        icon:'martenal', 
       },
       {
          title: 'Mammography',
