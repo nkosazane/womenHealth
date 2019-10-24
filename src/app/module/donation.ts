@@ -3,4 +3,5 @@ class Donation{
     surname: string;
     location: string;
     type: string;
+    date: Date;
 }

@@ -7,13 +7,39 @@
   Profile
     </ion-title>
   </ion-toolbar>
-</ion-header>
-<ion-content padding class="background-image">
+ </ion-header>
+ <ion-content>
+   <!-- <div *ngFor="let item of donateList">
+    {{item?.location}}
+    <br> -->
+    {{userList?.displayName}}   
+    <br>
+    {{userList?.age}}
+    <br>
+    {{userList?.gender}}
+    <br>
+    {{userList?.email}}
+    <br>
+    {{userList?.userid}}
+ <!-- </div> -->
+ <br>
+ <br>
+ 
+<ion-label>Donation history</ion-label>
+<br>
+<br>
 
    <div *ngFor="let item of donateList">
+    {{item?.name}}
+    <br>
+    {{item?.surname}}
+    <br>
     {{item?.location}}
     <br>
-
+    {{item?.type}}
+    <br>
+    {{item?.date}}
+    
+    
  </div>
- 
-</ion-content>
+ </ion-content>
