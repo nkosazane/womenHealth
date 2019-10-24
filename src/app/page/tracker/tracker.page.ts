@@ -30,11 +30,11 @@ export class TrackerPage implements OnInit {
       fertilePhaseStart: this.periods.PeriodCycleDays - 20,
       fertilePhaseEnd: this.periods.PeriodCycleDays - 11,
       ovulation: (this.periods.fertilePhaseStart - 1) + (this.periods.fertilePhaseEnd - this.periods.fertilePhaseStart)/2,
-      periodStart: this.periods.periodStartDate = new Date(moment().add(this.periods.PeriodCycleDays, 'days').calendar())
+      periodStart: this.periods.periodStartDate = new Date(moment().add(this.periods.PeriodCycleDays*2, 'days').calendar())
       
     });
-    console.log(this.periods.periodStartDate)
-    console.log(moment().add(28, 'days').calendar())
+    console.log("Your next periods start on:"+ this.periods.periodStartDate)
+
   }
 
 

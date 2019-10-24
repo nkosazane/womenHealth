@@ -3,11 +3,11 @@ import { AngularFireStorage } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
-  selector: 'app-video-tutorials',
-  templateUrl: './video-tutorials.page.html',
-  styleUrls: ['./video-tutorials.page.scss'],
+  selector: 'app-video',
+  templateUrl: './video.page.html',
+  styleUrls: ['./video.page.scss'],
 })
-export class VideoTutorialsPage implements OnInit {
+export class VideoPage implements OnInit {
 
   ref;
   task;

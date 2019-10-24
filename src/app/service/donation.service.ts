@@ -13,7 +13,8 @@ export class DonationService {
   constructor(private angularfire: AngularFirestore) { }
 
   getFile(key){
-    this.donationDoc = this.angularfire.doc<Donation>('donation/ionic serve'+key);
-    return this.donationDoc.valueChanges();
+  
+    return this.angularfire.collection('donation').doc('donators').collection(key).valueChanges();
   }
+
 }
