@@ -24,12 +24,22 @@
     </ion-col> 
   <br>
   <br>
+  <ion-col size="6" text-left>
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col> 
+  
+   
+     <ion-col size="6" text-right>
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+ 
+  
   <div class="container">
   <calendar  class="calendar"
   [eventSource]="eventSource" 
@@ -44,25 +54,10 @@
   startingDayWeek="1">
   </calendar>
   </div>
-  <br>
-  <br>
-  <br>
-  <ion-col size="6" text-left>
-    <ion-button fill="clear" (click)="back()">
-      <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
-    </ion-button>
-  </ion-col> 
-
- 
-   <ion-col size="6" text-right>
-    <ion-button fill="clear" (click)="next()">
-      <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
-    </ion-button>
-  </ion-col>
-</ion-row>
+  
 
 <h3>When was the first day of your last period?</h3>
-
+<br>
 <ion-button expand="full" color="primary"> Next</ion-button>
   <br>
   <br>
