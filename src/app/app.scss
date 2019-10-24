@@ -4,3 +4,14 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+.Reg{
+    text-align: center;
+    border-radius:48%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    }
+ion-content {
+    --ion-background-color: #f7cbdd;
+
+} 

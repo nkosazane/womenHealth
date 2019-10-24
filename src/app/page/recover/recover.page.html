@@ -3,7 +3,7 @@
    <ion-title align=center>Recover</ion-title>
  </ion-toolbar>
 </ion-header> -->
-<ion-content >
+<ion-content padding class="background-image">
        
     
         <div class="form-group">
@@ -14,18 +14,6 @@
               </div>
              
               <div class="form-group" *ngIf="!isForgotPassword">
-       
-                <!-- <span *ngIf="selectedVal == 'login'; else elseBlock">
-                  <button type="button" class="btn btn-primary" (click)="loginUser()">Log
-                    In</button>
-                </span>
-                <ng-template #elseBlock>
-                  <button type="button" class="btn btn-primary"
-                    (click)="registerUser()">Register</button>
-                </ng-template>
-                &nbsp;
-                &nbsp;
-                &nbsp; -->
                 <a href="javascript:void(0)" (click)="this.isForgotPassword= true;">Forgot
                   Password?</a>
        
@@ -68,6 +56,5 @@
             {{responseMessage}}
           </div>
       
-   
     </ion-content>
     

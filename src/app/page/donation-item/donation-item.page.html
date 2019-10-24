@@ -10,15 +10,18 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Donate-items
+      Donating items
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content padding>
-
-  <ion-list lines="full">
-    <ion-item>
+<ion-content padding class="background-image">
+<div class="Don">
+<img src="../../../assets/Capture1.JPG" alt="Don" class="Don" style="cursor: pointer;">
+</div>
+<br>
+<br>
+<ion-list lines="full">
+<ion-item>
       <ion-label position="stacked">Name<ion-text color="danger">*</ion-text></ion-label>
       <ion-input required type="text" [(ngModel)]="donation.name"></ion-input>
     </ion-item>
@@ -39,6 +42,6 @@
     </ion-item>
   </ion-list>
 
-    <ion-button expand="block" color="medium" (click)="form(donation)" >Submit</ion-button>
+    <ion-button expand="block" color="primary" (click)="form(donation)"><b>Submit</b></ion-button>
 </ion-content>
   

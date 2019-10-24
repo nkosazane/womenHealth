@@ -59,7 +59,7 @@ export class VideoTutorialsPage implements OnInit {
 
 async presentPrompt() {
   const alert = await this.alertCtrl.create({
-   message: '<strong>Two of the most common cancers affecting women are breast and cervical cancers. Detecting both these cancers early is key to keeping women alive and healthy.The latest global figures show that around half a million women die from cervical cancer and half a million from breast cancer each year.</strong>',
+   message:'<strong><i>Two of the most common cancers affecting women are breast and cervical cancers. Detecting both these cancers early is key to keeping women alive and healthy.The latest global figures show that around half a million women die from cervical cancer and half a million from breast cancer each year.</i></strong>',
    
     buttons: [
       {
