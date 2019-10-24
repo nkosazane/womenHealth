@@ -2,15 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 
+import * as moment from 'moment';
+
 @Component({
   selector: 'app-tracker',
   templateUrl: './tracker.page.html',
   styleUrls: ['./tracker.page.scss'],
 })
 export class TrackerPage implements OnInit {
-  
 
   periods = {} as Periods;
+
+  
 
   constructor(private angularfire: AngularFirestore, private afAuth: AngularFireAuth) { }
 
@@ -27,8 +30,13 @@ export class TrackerPage implements OnInit {
       fertilePhaseStart: this.periods.PeriodCycleDays - 20,
       fertilePhaseEnd: this.periods.PeriodCycleDays - 11,
       ovulation: (this.periods.fertilePhaseStart - 1) + (this.periods.fertilePhaseEnd - this.periods.fertilePhaseStart)/2,
-      periodStart: this.periods.periodStartDate = new Date()
+      periodStart: this.periods.periodStartDate = new Date(moment().add(this.periods.PeriodCycleDays, 'days').calendar())
+      
     });
+    console.log(this.periods.periodStartDate)
+    console.log(moment().add(28, 'days').calendar())
   }
+
+
 
 }

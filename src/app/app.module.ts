@@ -24,9 +24,6 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Camera } from '@ionic-native/camera/ngx';
 import { NgCalendarModule  } from 'ionic2-calendar';
 
-
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
   authDomain: "womanhealth-a607a.firebaseapp.com",
@@ -53,7 +50,7 @@ const firebaseConfig = {
       AngularFirestoreModule,
       AngularFireStorageModule,
       ExampleModalPageModule,
-      NgCalendarModule
+      NgCalendarModule,
     
     ],
   providers: [
