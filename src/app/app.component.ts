@@ -71,7 +71,7 @@ export class AppComponent {
     //   url: '/logout',
     //   icon: 'log-out'
     // },
-  
+
   ];
 
   constructor(

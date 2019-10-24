@@ -22,6 +22,7 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Camera } from '@ionic-native/camera/ngx';
+import { NgCalendarModule  } from 'ionic2-calendar';
 
 
 
@@ -51,7 +52,8 @@ const firebaseConfig = {
       AngularFireAuthModule,
       AngularFirestoreModule,
       AngularFireStorageModule,
-      ExampleModalPageModule
+      ExampleModalPageModule,
+      NgCalendarModule
     
     ],
   providers: [
