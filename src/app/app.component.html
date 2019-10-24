@@ -1,11 +1,14 @@
 <ion-app >
   <ion-menu contentId="content" side="start">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
+      <ion-toolbar color="success">
+        <ion-title>Women's Health</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content padding="">
+    <ion-content>
+        <div class="Reg">
+            <img src="../../../assets/Capture.JPG" alt="Reg" class="Reg" style="cursor: pointer;">
+            </div>
       <ion-list>
         <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
           <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">

@@ -5,13 +5,14 @@ h1{
 }
 
 
-ion-content {
---ion-background-color:#db6fa5 ;
-}
-
 // ion-content {
-//   --ion-background-color:#353985;
+// --ion-background-color:#db6fa5 ;
 // }
-//   .background-image {
-//     --background: url('../../../assets/giphy.gif')0 0/100% 100%  no-repeat;
-//   }
+
+.background-image {
+  --background: url('../../../assets/Background2.jpg')0 0/100% 100%  no-repeat;
+}
+.img-container {
+  text-align: center;
+  border-radius: 48%;
+}

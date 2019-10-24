@@ -9,131 +9,15 @@
   </ion-toolbar>
 </ion-header>
 <ion-content padding class="background-image">
-
-    <div class="form-group text-center">
-        <img src="../../../assets/donate.PNG" alt="donate" class="donate" style="cursor: pointer;">
-        </div>
-   <h1>Donate one packet of sanitory pad and make a Difference!</h1>
-  
-   <br>
-  <img src="../../../assets/sanitarypads.jpg" class="sanitarypads" /> 
-  
-  <br>
-    
-  <h1>#The Pad Effect,</h1>
-  <h1>because the life depends of it!</h1>
-  
-  <ion-button expand="block" color="secondary" (click)="payment()" >Make a payment</ion-button>
-  <ion-button expand="block" color="medium" (click)="items()" >Drop an Item!</ion-button>
-<!-- <ion-button>make donation</ion-button> -->
-<!-- <div class="ion-padding"> -->
-      
-  
-<!-- <ion-button  (click)="openForm()">make donation</ion-button>
-    <button class="open-button" onclick="openForm()">Open Form</button> -->
-
-<!-- <div class="form-popup ion-padding"  id="myForm">
-<form action="/action_page.php" class="form-container" >
--------------------------------------------------
-  <h3>make a donation</h3>
--------------------------------------------------
-  <h2 class="item-text-wrap">donation</h2>
-  
-
- 
-  <ion-grid id="tempGrid">
-    
-    <ion-row>
-      <ion-col>
-          <ion-button class="btn" (click)="openForm2()">donate money</ion-button>
-      </ion-col>
-     
-      <ion-col>
-              <ion-button class="btn"(click)=" openForm2()">donate items</ion-button>
-      </ion-col>
-    </ion-row> 
-  </ion-grid>
-  
-</form>
+<div class="img-container">
+<img src="../../../assets/Capture1.JPG" alt="img-container" class="img-container" style="cursor: pointer;">
 </div>
-
-<div class="form-popup ion-padding"  id="myForm2">
-  <form action="/action_page.php" class="form-container" >
-  -------------------------------------------------
-    <h3>donation form</h3>
-  -------------------------------------------------
-
-    <ion-grid id="tempGrid1">
-      
-    
-
-    <ion-row>
-      <ion-col>
-        <ion-item>
-          <ion-input placeholder="Enter Name" [(ngModel)]="name"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-          <ion-input placeholder="Enter Age" [(ngModel)]="age"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col>
-        <ion-item>
-          <ion-input placeholder="Enter Address" [(ngModel)]="surname"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col text-center>
-        <ion-button (click)="CreateRecord()" [disabled]="!name || !age || !surname">
-          <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
-          &nbsp;Create Record
-        </ion-button>
-      </ion-col>
-    </ion-row>
- 
-      <ion-row>
-        <ion-col>
-            <ion-button class="btn" (click)=" closeForm()">Edit</ion-button>
-        </ion-col>
-       
-        <ion-col>
-                <ion-button class="btn"(click)=" openForm3()+closeForm()+addDocument()">done</ion-button>
-                
-                 
-        </ion-col>
-      </ion-row> 
-    </ion-grid>
-    
-  </form>
-  </div>
-
-  <div class="form-popup ion-padding"  id="myForm3">
-    <form action="/action_page.php" class="form-container" >
-    -------------------------------------------------
-      <h3>THANK YOU </h3>
-    -------------------------------------------------
-  
-      <ion-grid id="tempGrid2">
-        
-       banking details 
-       <br>
-       accounts
-        <ion-row>
-         
-         
-          <ion-col>
-                  <ion-button class="btn" >back</ion-button>
-          </ion-col>
-        </ion-row> 
-      </ion-grid>
-      
-    </form>
-    </div>
-
-  
-
-    
-</div> -->
+<h1>Donate one packet of sanitory pad and make a difference!</h1>
+<br>
+<img src="../../../assets/sanitarypads.jpg" class="sanitarypads" /> 
+<br>
+<h1>#The Pad effect because the life depends on it!</h1>
+<br>
+<ion-button expand="block" color="secondary" (click)="payment()" >Make a payment</ion-button>
+<ion-button expand="block" color="primary" (click)="items()" >Drop an Item..</ion-button>
 </ion-content>

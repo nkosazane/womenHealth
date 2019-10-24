@@ -1,17 +1,15 @@
-ion-content {
-    --ion-background-color:#ebb8cc ;
-  }
-  nav ul {
+nav ul {
     list-style-type: none;
     padding: 0;
     color:blue;
-    
   }
+
   a{
-    color: #000;
+    color: darkslategrey;
   } 
+
   header {
-    background-color: #db6fa5 ;
+    background-color: #e07394;
     padding: 30px;
     text-align: center;
     font-size: larger;
@@ -19,9 +17,41 @@ ion-content {
     font-size: larger;
 
  }
+
   h2{
     font-size: 2.6rem;
    -webkit-text-fill-color: #630735;
    -webkit-text-stroke-width: 0.4px;
    -webkit-text-stroke-color:#f2f5f8;
+  }
+
+  .background-image {
+    --background: url('../../../assets/Background2.jpg')0 0/100% 100%  no-repeat;
+   }
+   
+   .p{
+     color:black;
+   }
+   ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: bottom;
+    top: 30%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: darkslategray;
+    font-family:  'Muli' !important;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 30%;
+    width: 60%;
+    color: darkslategray;
+    font-family:  'Muli' !important;
   }
