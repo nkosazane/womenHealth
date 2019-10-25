@@ -9,21 +9,21 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
- 
+
   donation = {} as Donation;
   donateList;
 
   constructor(
     private afAuth: AngularFireAuth,
-   private angularfire:AngularFirestore, private donateServ: DonationService
+    private angularfire: AngularFirestore, private donateServ: DonationService
   ) {
-    
+
     const key = this.afAuth.auth.currentUser.uid;
 
     this.donateServ.getFile(key).subscribe(data => {
       this.donateList = data;
       console.log(data);
-    })
+    });
 
     // this.users=afstore.collection('donation').valueChanges();
   }
