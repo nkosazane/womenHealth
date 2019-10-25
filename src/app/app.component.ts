@@ -41,8 +41,6 @@ export class AppComponent {
          icon:'chatbubbles',
          },
 
-         
-     
      ]
     },
    
@@ -62,15 +60,15 @@ export class AppComponent {
       icon: 'videocam'
     },
     {
+      title: 'Videos',
+      url: '/video',
+      icon: 'videocam'
+    },
+    {
       title: 'Period tracker',
-      url: '/pariod-tracker',
+      url: '/tracker',
       icon: 'analytics'
     },
-    // {
-    //   title: 'Logout',
-    //   url: '/logout',
-    //   icon: 'log-out'
-    // },
 
   ];
 

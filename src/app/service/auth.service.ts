@@ -18,11 +18,11 @@ export class AuthService {
      public afAuth: AngularFireAuth,
       private alertCtrl : AlertController ) { 
     afAuth.auth.onAuthStateChanged((user)=>{
-      // if(user){
-      //   this.router.navigateByUrl("");
-      // }else{
-      //   this.router.navigateByUrl("");
-      // }
+      if(user){
+        this.router.navigateByUrl("profile");
+      }else{
+        this.router.navigateByUrl("");
+      }
     })
   }
 

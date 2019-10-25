@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
 
 @Component({
   selector: 'app-video',
@@ -14,7 +15,7 @@ export class VideoPage implements OnInit {
   uploadProgress;
  downloadURL;
 
-  constructor(private afd: AngularFirestore, private afs: AngularFireStorage) { }
+  constructor(private afd: AngularFirestore, private afs: AngularFireStorage, private videoPlayer: VideoPlayer) { }
   addVideo(vid) {
     const VideoFire = this.afd.collection('videos');
     VideoFire.add(vid).then(() => {
@@ -23,7 +24,8 @@ export class VideoPage implements OnInit {
         alert('Error adding book: ' + err.message);
     });
   }
-   ngOnInit(){}
+   ngOnInit(
+   ){}
 
   uploadVideo(event) {
     const VideoName = this.makeid(10) + '.MKV';
@@ -48,5 +50,13 @@ export class VideoPage implements OnInit {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
    }
    return result;
+}
+
+playVideoHosted(){
+  this.videoPlayer.play('https://firebasestorage.googleapis.com/v0/b/womanhealth-a607a.appspot.com/o/uploads%2Fvideos%2FsH5dhHA0fl.MKV?alt=media&token=a9e9c7b6-ec00-4bfe-a2b0-1b6b165e4d49').then(() =>{
+    console.log('video completed');
+  }).catch(err => {
+    console.log(err)
+  });
 }
 }
