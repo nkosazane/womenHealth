@@ -1,7 +1,9 @@
+import { VideoPage } from './../video/video.page';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-video-tutorials',
@@ -19,6 +21,7 @@ export class VideoTutorialsPage implements OnInit {
   constructor(private afd: AngularFirestore, 
     private afs: AngularFireStorage,
     private alertCtrl:AlertController,
+    private router: Router,
     ) { }
   addVideo(vid) {
     const VideoFire = this.afd.collection('videos');
@@ -63,11 +66,19 @@ async presentPrompt() {
       {
         text: 'Cancel',
         role: 'cancel',
-        cssClass: 'secondary',
+        cssClass: 'dark',
         handler: () => {
           console.log('cancelled');
         }
-      },
+      }, {
+        text: 'Watch Video',
+        role:'watch',
+        cssClass:'dark',
+        handler: (data) => {
+       this.router.navigateByUrl('video')
+        }
+      }
+ 
       
     ]
   });
@@ -87,7 +98,15 @@ async presentPrompt2() {
         handler: () => {
           console.log('cancelled');
         }
-      },
+      }, {
+        text: 'Watch Video',
+        role:'watch',
+        cssClass:'dark',
+        handler: (data) => {
+       this.router.navigateByUrl('video')
+        }
+      }
+ 
       
     ]
   });
@@ -105,7 +124,15 @@ async presentPrompt3() {
         handler: () => {
           console.log('cancelled');
         }
-      },
+      }, {
+        text: 'Watch Video',
+        role:'watch',
+        cssClass:'dark',
+        handler: (data) => {
+       this.router.navigateByUrl('video')
+        }
+      }
+ 
       
     ]
   });
