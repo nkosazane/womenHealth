@@ -94,7 +94,7 @@ async presentPrompt2() {
       {
         text: 'Cancel',
         role: 'cancel',
-        cssClass: 'secondary',
+        cssClass: 'dark',
         handler: () => {
           console.log('cancelled');
         }
@@ -120,7 +120,7 @@ async presentPrompt3() {
       {
         text: 'Cancel',
         role: 'cancel',
-        cssClass: 'secondary',
+        cssClass: 'dark',
         handler: () => {
           console.log('cancelled');
         }
