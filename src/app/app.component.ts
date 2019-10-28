@@ -55,7 +55,7 @@ export class AppComponent {
       icon: 'card'
     },
     {
-      title: 'Video-tutorial',
+      title: 'Video-tutorials',
       url: '/video-tutorials',
       icon: 'videocam'
     },
