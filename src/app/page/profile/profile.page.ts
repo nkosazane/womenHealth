@@ -10,6 +10,10 @@ import { UsersService } from '../../service/users.service';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
+<<<<<<< HEAD
+
+=======
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
   donation = {} as Donation;
  donateList;
  users = {} as Users;
@@ -17,16 +21,20 @@ export class ProfilePage implements OnInit {
 
   constructor(
     private afAuth: AngularFireAuth,
+<<<<<<< HEAD
+    private angularfire: AngularFirestore, private donateServ: DonationService
+=======
    private angularfire:AngularFirestore, private donateServ: DonationService,
    private userServ:UsersService
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
   ) {
-    
+
     const key = this.afAuth.auth.currentUser.uid;
 
     this.donateServ.getFile(key).subscribe(data => {
       this.donateList = data;
       console.log(data);
-    })
+    });
 
     // this.users=afstore.collection('donation').valueChanges();
   }
