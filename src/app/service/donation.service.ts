@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreDocument, AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreDocument, AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+import * as firebase from 'firebase';
+export interface donation {
 
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -10,10 +14,11 @@ export class DonationService {
 
   donation = {} as Donation;
 
-  constructor(private angularfire: AngularFirestore) { }
-
-  getFile(key){
-    this.donationDoc = this.angularfire.doc<Donation>('donation/ionic serve'+key);
-    return this.donationDoc.valueChanges();
+  constructor(private angularfire: AngularFirestore) {
+  
+   }
+   getFile(key){
+    return this.angularfire.collection('donation').doc('donators').collection(key).valueChanges();
   }
+
 }

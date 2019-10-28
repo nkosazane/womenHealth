@@ -23,6 +23,7 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Camera } from '@ionic-native/camera/ngx';
 import { NgCalendarModule  } from 'ionic2-calendar';
+import { VideoPlayer } from '@ionic-native/video-player/ngx';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
@@ -59,6 +60,7 @@ const firebaseConfig = {
     Camera,
     AuthService,
     PayPal,
+    VideoPlayer,
     AngularFirestore,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

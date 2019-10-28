@@ -7,7 +7,7 @@
 <div class="forms">
 <div class="form">
 <ion-item>
-<ion-label position="floating">Name</ion-label>
+<ion-label position="floating">Name:</ion-label>
 <ion-input type="text" formControlName="name" required ></ion-input>
 </ion-item>
 <div class="error" *ngIf="register.get('name').hasError('required') && register.get('name').touched">
@@ -20,7 +20,7 @@ Minimum 3 characters
 Maximum 30 characters
 </div>
 <ion-item>
-<ion-label position="floating">Gender</ion-label>
+<ion-label position="floating">Gender:</ion-label>
 <ion-input type="text" formControlName="gender" required></ion-input>
 </ion-item>
 <div class="error" *ngIf="register.get('gender').hasError('required') && register.get('gender').touched">
@@ -33,7 +33,7 @@ Minimum 3 characters
 Maximum 30 characters
 </div>
 <ion-item>
-<ion-label position="floating">Age</ion-label>
+<ion-label position="floating">Age:</ion-label>
 <ion-input type="text" formControlName="age" required></ion-input>
 </ion-item>
 <div class="error" *ngIf="register.get('age').hasError('required') && register.get('age').touched">
@@ -46,7 +46,7 @@ Minimum 3 characters
 Maximum 30 characters
 </div>
 <ion-item>
-<ion-label position="floating">Email</ion-label>
+<ion-label position="floating">Email:</ion-label>
 <ion-input type="email" formControlName="email"></ion-input>
 </ion-item>
 <div class="error" *ngIf="register.get('email').hasError('required') && register.get('email').touched">
@@ -56,7 +56,7 @@ Please input your email
 Email address invalid
 </div>
 <ion-item color="transparent" class="group">
-<ion-label position="floating">Password</ion-label>
+<ion-label position="floating">Password:</ion-label>
 <ion-input type="password" formControlName="password"></ion-input>
 </ion-item>
 <div class="error" *ngIf="register.get('password').hasError('required') && register.get('password').touched">

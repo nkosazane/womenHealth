@@ -27,7 +27,7 @@ export class DonationItemPage implements OnInit {
       name: donation.name,
       surname: donation.surname,
       location: donation.location,
-      TimeStamp:firebase.firestore.FieldValue.serverTimestamp(),
+      date: this.donation.date = new Date(),
       type: donation.type
     }).then (() =>{
       this.router.navigateByUrl('donation');

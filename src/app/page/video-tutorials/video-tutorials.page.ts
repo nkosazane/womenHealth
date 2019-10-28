@@ -1,7 +1,9 @@
+import { VideoPage } from './../video/video.page';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-video-tutorials',
@@ -15,10 +17,17 @@ export class VideoTutorialsPage implements OnInit {
   uploadProgress;
  downloadURL;
 
+<<<<<<< HEAD
 
   constructor(private afd: AngularFirestore,
               private afs: AngularFireStorage,
               private alertCtrl: AlertController,
+=======
+  constructor(private afd: AngularFirestore, 
+    private afs: AngularFireStorage,
+    private alertCtrl:AlertController,
+    private router: Router,
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ) { }
   addVideo(vid) {
     const VideoFire = this.afd.collection('videos');
@@ -32,14 +41,12 @@ export class VideoTutorialsPage implements OnInit {
 
   uploadVideo(event) {
     const VideoName = this.makeid(10) + '.MKV';
-  // this.afs.upload('/upload/to/this-path', event.target.files[0]);
- // const randomId = Math.random().toString(36).substring(2);
+ 
     const file = event.target.files[0];
     const filePath = 'uploads/videos/' + VideoName;
     const ref = this.afs.ref(filePath);
     const task = ref.put(file);
-    // vid.url = VideoName;
-    // this.addVideo(vid);
+    
     return this.uploadProgress = task.percentageChanges();
  }
   retreiveVideo(video) {
@@ -66,12 +73,25 @@ async presentPrompt() {
       {
         text: 'Cancel',
         role: 'cancel',
-        cssClass: 'secondary',
+        cssClass: 'dark',
         handler: () => {
           console.log('cancelled');
         }
+<<<<<<< HEAD
       },
 
+=======
+      }, {
+        text: 'Watch Video',
+        role:'watch',
+        cssClass:'dark',
+        handler: (data) => {
+       this.router.navigateByUrl('video')
+        }
+      }
+ 
+      
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
@@ -87,12 +107,25 @@ async presentPrompt2() {
       {
         text: 'Cancel',
         role: 'cancel',
-        cssClass: 'secondary',
+        cssClass: 'dark',
         handler: () => {
           console.log('cancelled');
         }
+<<<<<<< HEAD
       },
 
+=======
+      }, {
+        text: 'Watch Video',
+        role:'watch',
+        cssClass:'dark',
+        handler: (data) => {
+       this.router.navigateByUrl('video')
+        }
+      }
+ 
+      
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
@@ -106,12 +139,25 @@ async presentPrompt3() {
       {
         text: 'Cancel',
         role: 'cancel',
-        cssClass: 'secondary',
+        cssClass: 'dark',
         handler: () => {
           console.log('cancelled');
         }
+<<<<<<< HEAD
       },
 
+=======
+      }, {
+        text: 'Watch Video',
+        role:'watch',
+        cssClass:'dark',
+        handler: (data) => {
+       this.router.navigateByUrl('video')
+        }
+      }
+ 
+      
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();

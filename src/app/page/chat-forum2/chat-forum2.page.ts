@@ -29,7 +29,7 @@ export class ChatForum2Page implements OnInit {
     public actionSheetController: ActionSheetController,private fb: FormBuilder ) {
 
     this.key = this.afAuth.auth.currentUser.uid;
-    this.chatRef = this.angularfire.collection('chats',ref=>ref.orderBy('TimeStamp')).valueChanges();
+    this.chatRef = this.angularfire.collection('chats2',ref=>ref.orderBy('TimeStamp')).valueChanges();
    
    }
 
@@ -39,7 +39,7 @@ export class ChatForum2Page implements OnInit {
    
     if(this.message != ''){
     
-      this.angularfire.collection('chats').add({
+      this.angularfire.collection('chats2').add({
        Name: this.afAuth.auth.currentUser.displayName,
        Message: this.message,
        UserID: this.afAuth.auth.currentUser.uid,
@@ -60,7 +60,7 @@ export class ChatForum2Page implements OnInit {
     finalize(() => {
       this.downloadURL = this.ref.getDownloadURL().subscribe(urlfile=>{
          console.log(urlfile);
-         this.angularfire.collection('chats').add({
+         this.angularfire.collection('chats2').add({
           Name: this.afAuth.auth.currentUser.displayName,
           image:urlfile,
           UserID: this.afAuth.auth.currentUser.uid,

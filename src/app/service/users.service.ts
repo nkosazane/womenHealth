@@ -9,6 +9,11 @@ export class UsersService {
 
   constructor(private angularfire:AngularFirestore) { }
 
+ getUser(key){
+  this.usersDoc = this.angularfire.doc<Users>('users/'+key);
+  return this.usersDoc.valueChanges();
+}
+
   getUsers(){
     return this.angularfire.collection('users').snapshotChanges();
   }

@@ -33,8 +33,8 @@ export class TrackerPage implements OnInit {
       periodStart: this.periods.periodStartDate = new Date(moment().add(this.periods.PeriodCycleDays, 'days').calendar())
       
     });
-    console.log(this.periods.periodStartDate)
-    console.log(moment().add(28, 'days').calendar())
+    console.log("Your next periods start on: "+ this.periods.periodStartDate)
+
   }
 
 
