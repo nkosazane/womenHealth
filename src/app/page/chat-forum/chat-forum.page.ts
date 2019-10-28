@@ -62,7 +62,7 @@ export class ChatForumPage implements OnInit {
     finalize(() => {
       this.downloadURL = this.ref.getDownloadURL().subscribe(urlfile=>{
          console.log(urlfile);
-         this.angularfire.collection('chats').add({
+         this.angularfire.collection('chat-s').add({
           Name: this.afAuth.auth.currentUser.displayName,
           image:urlfile,
           UserID: this.afAuth.auth.currentUser.uid,

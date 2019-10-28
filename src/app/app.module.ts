@@ -24,6 +24,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Camera } from '@ionic-native/camera/ngx';
 import { NgCalendarModule  } from 'ionic2-calendar';
 import { VideoPlayer } from '@ionic-native/video-player/ngx';
+import { AndroidExoplayer } from '@ionic-native/android-exoplayer/ngx';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
@@ -62,6 +63,7 @@ const firebaseConfig = {
     PayPal,
     VideoPlayer,
     AngularFirestore,
+    AndroidExoplayer,    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
