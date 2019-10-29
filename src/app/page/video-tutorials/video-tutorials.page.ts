@@ -17,17 +17,10 @@ export class VideoTutorialsPage implements OnInit {
   uploadProgress;
  downloadURL;
 
-<<<<<<< HEAD
 
   constructor(private afd: AngularFirestore,
               private afs: AngularFireStorage,
               private alertCtrl: AlertController,
-=======
-  constructor(private afd: AngularFirestore, 
-    private afs: AngularFireStorage,
-    private alertCtrl:AlertController,
-    private router: Router,
->>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ) { }
   addVideo(vid) {
     const VideoFire = this.afd.collection('videos');
@@ -77,21 +70,8 @@ async presentPrompt() {
         handler: () => {
           console.log('cancelled');
         }
-<<<<<<< HEAD
       },
 
-=======
-      }, {
-        text: 'Watch Video',
-        role:'watch',
-        cssClass:'dark',
-        handler: (data) => {
-       this.router.navigateByUrl('video')
-        }
-      }
- 
-      
->>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
@@ -111,21 +91,8 @@ async presentPrompt2() {
         handler: () => {
           console.log('cancelled');
         }
-<<<<<<< HEAD
       },
 
-=======
-      }, {
-        text: 'Watch Video',
-        role:'watch',
-        cssClass:'dark',
-        handler: (data) => {
-       this.router.navigateByUrl('video')
-        }
-      }
- 
-      
->>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
@@ -143,21 +110,8 @@ async presentPrompt3() {
         handler: () => {
           console.log('cancelled');
         }
-<<<<<<< HEAD
       },
 
-=======
-      }, {
-        text: 'Watch Video',
-        role:'watch',
-        cssClass:'dark',
-        handler: (data) => {
-       this.router.navigateByUrl('video')
-        }
-      }
- 
-      
->>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();

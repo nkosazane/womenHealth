@@ -30,7 +30,7 @@ export class DonationItemPage implements OnInit {
       date: this.donation.date = new Date(),
       type: donation.type
     }).then (() =>{
-      this.router.navigateByUrl('donation');
+      this.router.navigateByUrl('drop-off');
     })
 
   }
