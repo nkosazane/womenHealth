@@ -1,4 +1,10 @@
 <ion-header>
+<<<<<<< HEAD
+    <ion-toolbar>
+        <ion-title>Period Calculator</ion-title>
+    </ion-toolbar>
+</ion-header>
+=======
   <ion-toolbar color="primary">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
@@ -6,25 +12,46 @@
     <ion-title>Period Calculator</ion-title>
   </ion-toolbar>
  </ion-header>
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
 
 <ion-content padding class="background-image">
-  <div class="Trac">
-  <img src="../../../assets/Capture.JPG" alt="Trac" class="Trac" style="cursor: pointer;">
-  </div>
-  <br>
-  <br>
-  <br>
+    <div class="Trac">
+        <img src="../../../assets/Capture.JPG" alt="Trac" class="Trac" style="cursor: pointer;">
+    </div>
+    <br>
+    <br>
+    <br>
 
 
     <ion-list lines="full" class="ion-no-margin ion-no-padding">
         <ion-item>
-          <ion-label position="stacked">Last Period Date<ion-text color="danger">*</ion-text></ion-label>
-          <ion-input required type="Date" [(ngModel)]="periods.lastDate"></ion-input>
+            <ion-label position="stacked">Last Period Date
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input required type="Date" [(ngModel)]="periods.lastDate"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label position="stacked">Period Cycle Days<ion-text color="danger">*</ion-text></ion-label>
+            <ion-label position="stacked">Period Cycle Days
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
             <ion-input required type="number" [(ngModel)]="periods.PeriodCycleDays"></ion-input>
+<<<<<<< HEAD
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Flow Days
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input required type="number" [(ngModel)]="periods.bleedingDays"></ion-input>
+        </ion-item>
+
+    </ion-list>
+    <br>
+    <div class="ion-padding">
+        <ion-button expand="block" type="submit" class="ion-no-margin" (click)="tracker(periods)">Track Now</ion-button>
+    </div>
+=======
           </ion-item>
 
           <ion-item>
@@ -37,5 +64,6 @@
         <div class="ion-padding">
             <ion-button expand="block" type="submit" class="ion-no-margin" (click)="tracker(periods)">Track Now</ion-button>
           </div> 
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
 
 </ion-content>

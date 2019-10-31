@@ -16,12 +16,18 @@ export class VideoTutorialsPage implements OnInit {
   task;
   uploadProgress;
  downloadURL;
-  
 
+<<<<<<< HEAD
+
+  constructor(private afd: AngularFirestore,
+              private afs: AngularFireStorage,
+              private alertCtrl: AlertController,
+=======
   constructor(private afd: AngularFirestore, 
     private afs: AngularFireStorage,
     private alertCtrl:AlertController,
     private router: Router,
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ) { }
   addVideo(vid) {
     const VideoFire = this.afd.collection('videos');
@@ -31,7 +37,7 @@ export class VideoTutorialsPage implements OnInit {
         alert('Error adding book: ' + err.message);
     });
   }
-   ngOnInit(){}
+   ngOnInit() {}
 
   uploadVideo(event) {
     const VideoName = this.makeid(10) + '.MKV';
@@ -60,8 +66,9 @@ export class VideoTutorialsPage implements OnInit {
 
 async presentPrompt() {
   const alert = await this.alertCtrl.create({
-   message:'<strong><i>Two of the most common cancers affecting women are breast and cervical cancers. Detecting both these cancers early is key to keeping women alive and healthy.The latest global figures show that around half a million women die from cervical cancer and half a million from breast cancer each year.</i></strong>',
-   
+   // tslint:disable-next-line:max-line-length
+   message: '<strong><i>Two of the most common cancers affecting women are breast and cervical cancers. Detecting both these cancers early is key to keeping women alive and healthy.The latest global figures show that around half a million women die from cervical cancer and half a million from breast cancer each year.</i></strong>',
+
     buttons: [
       {
         text: 'Cancel',
@@ -70,6 +77,10 @@ async presentPrompt() {
         handler: () => {
           console.log('cancelled');
         }
+<<<<<<< HEAD
+      },
+
+=======
       }, {
         text: 'Watch Video',
         role:'watch',
@@ -80,6 +91,7 @@ async presentPrompt() {
       }
  
       
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
@@ -88,8 +100,9 @@ async presentPrompt() {
 
 async presentPrompt2() {
   const alert = await this.alertCtrl.create({
+   // tslint:disable-next-line:max-line-length
    message: '<strong>Regular periods are a sign that your body is working normally.You should have regular periods unless you are pregnant, breastfeeding, postmenopausal, or have a medical condition that causes your periods to stop.<strong>Irregular, painful, or heavy periods may be signs of a serious health problem.Irregular periods also can make it harder to get your doctor can work with you to help get your periods more regular.</strong>',
-   
+
     buttons: [
       {
         text: 'Cancel',
@@ -98,6 +111,10 @@ async presentPrompt2() {
         handler: () => {
           console.log('cancelled');
         }
+<<<<<<< HEAD
+      },
+
+=======
       }, {
         text: 'Watch Video',
         role:'watch',
@@ -108,14 +125,16 @@ async presentPrompt2() {
       }
  
       
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
 }
 async presentPrompt3() {
   const alert = await this.alertCtrl.create({
+   // tslint:disable-next-line:max-line-length
    message: ' <strong>Many women are now benefiting from massive improvements in care during pregnancy and childbirth introduced in the last century.But those benefits do not extend everywhere and in 2013, almost 300 000 women died from complications in pregnancy and childbirth. Most of these deaths could have been prevented,had access to family planning and to some quite basic services been in place</strong>',
-   
+
     buttons: [
       {
         text: 'Cancel',
@@ -124,6 +143,10 @@ async presentPrompt3() {
         handler: () => {
           console.log('cancelled');
         }
+<<<<<<< HEAD
+      },
+
+=======
       }, {
         text: 'Watch Video',
         role:'watch',
@@ -134,6 +157,7 @@ async presentPrompt3() {
       }
  
       
+>>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
