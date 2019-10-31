@@ -15,6 +15,7 @@ export class VideoPage implements OnInit {
   task;
   uploadProgress;
  downloadURL;
+ video;
 
   constructor(private afd: AngularFirestore, private afs: AngularFireStorage, private videoPlayer: VideoPlayer,private android:AndroidExoplayer) { }
   addVideo(vid) {
@@ -24,6 +25,8 @@ export class VideoPage implements OnInit {
     }).catch( err => {
         alert('Error adding book: ' + err.message);
     });
+
+    this.video = this.retreiveVideo('JvAw64bLP0.mp4')
   }
    ngOnInit(
    ){}
@@ -55,14 +58,14 @@ export class VideoPage implements OnInit {
 
 playVideoHosted(){
   
-  // https://firebasestorage.googleapis.com/v0/b/womanhealth-a607a.appspot.com/o/uploads%2Fvideos%2FsH5dhHA0fl.MKV?alt=media&token=a9e9c7b6-ec00-4bfe-a2b0-1b6b165e4d49
-  // this.videoPlayer.play('').then(() =>{
-  //   console.log('video completed');
-  // }).catch(err => {
-  //   console.log(err)
-  // });
+  
+  this.videoPlayer.play(this.video).then(() =>{
+    console.log('video completed');
+  }).catch(err => {
+    console.log(err)
+  });
 
-  this.android.show({url:"/assets/FripJ917my.MKV"})
+  // this.android.show({url:'https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4'})
 }
 
 

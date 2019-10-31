@@ -17,9 +17,8 @@ export class ProfilePage implements OnInit {
 
   constructor(
     private afAuth: AngularFireAuth,
-    private angularfire: AngularFirestore,
-     private donateServ: DonationService,
-    private userServ: UsersService,
+   private angularfire:AngularFirestore, private donateServ: DonationService,
+   private userServ:UsersService
   ) {
 
     const key = this.afAuth.auth.currentUser.uid;

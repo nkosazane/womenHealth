@@ -55,15 +55,15 @@ export class AppComponent {
       icon: 'card'
     },
     {
-      title: 'Video-tutorials',
+      title: 'Health Information',
       url: '/video-tutorials',
       icon: 'videocam'
     },
-    {
-      title: 'Videos',
-      url: '/video',
-      icon: 'videocam'
-    },
+    // {
+    //   title: 'Videos',
+    //   url: '/video',
+    //   icon: 'videocam'
+    // },
     {
       title: 'Period tracker',
       url: '/tracker',
