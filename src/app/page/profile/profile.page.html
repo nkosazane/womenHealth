@@ -42,10 +42,10 @@
  <br>
  <br>
  
-<ion-label class="Donation">Donation history</ion-label>
+<!-- <ion-label class="Donation">Donation history</ion-label>
 <br>
-<br>
-<div *ngFor="let item of donateList">
+<br> -->
+<!-- <div *ngFor="let item of donateList"> -->
 <!-- <ion-item color="secondary">
   <ion-label>Name:</ion-label>
   {{item?.name}}
@@ -56,7 +56,7 @@
   {{item?.surname}}
   </ion-item>
     <br> -->
-    <br>
+    <!-- <br>
   <ion-item color="secondary">
   <ion-label>Location:</ion-label>
   {{item?.location}}
@@ -72,5 +72,83 @@
     {{item?.date}}
   </ion-item>
     
- </div>
+ </div> -->
+
+ <!-- <table >
+  <br>
+<h1>Donation History</h1>
+<br>
+  <tr>
+    <th>Location</th>
+
+    <th>Type of Donation</th>
+    
+    <th>Date</th>
+  </tr>
+  <tr>
+   <td>
+      <div *ngFor="let item of donateList">
+        {{item?.location}}
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        </div>
+   </td>
+   <td>
+  <div *ngFor="let item of donateList">
+    {{item?.type}}
+    &nbsp;
+    &nbsp;
+    &nbsp;  
+  </div>
+   </td>
+/ -->
+ <!-- <td>
+  <div *ngFor="let item of donateList">
+  {{item?.date}}
+    
+    </div>
+</td> -->
+  <!-- </tr>
+</table> -->
+<label>LOCATION</label>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+<label>TYPE OF DONATION</label>
+
+<div *ngFor="let item of donateList">
+<ion-grid>
+    <ion-row>
+      
+      <ion-col>
+          {{item?.location}}
+          &nbsp;
+          &nbsp;
+
+      </ion-col>
+      <ion-col>
+          {{item?.type}}
+      </ion-col>
+    </ion-row>
+     <ion-row>
+      
+        <!-- <ion-col>
+            ion-col
+          </ion-col>
+          <ion-col>
+              ion-col
+            </ion-col> -->
+       
+    </ion-row>
+  </ion-grid>
+</div>
  </ion-content>
