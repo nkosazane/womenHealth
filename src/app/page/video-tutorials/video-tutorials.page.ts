@@ -1,4 +1,3 @@
-import { VideoPage } from './../video/video.page';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { AngularFirestore } from '@angular/fire/firestore';
@@ -17,52 +16,12 @@ export class VideoTutorialsPage implements OnInit {
   uploadProgress;
  downloadURL;
 
-<<<<<<< HEAD
-
-  constructor(private afd: AngularFirestore,
-              private afs: AngularFireStorage,
-              private alertCtrl: AlertController,
-=======
   constructor(private afd: AngularFirestore, 
     private afs: AngularFireStorage,
     private alertCtrl:AlertController,
     private router: Router,
->>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ) { }
-  addVideo(vid) {
-    const VideoFire = this.afd.collection('videos');
-    VideoFire.add(vid).then(() => {
-      alert('Successfully Added Book');
-    }).catch( err => {
-        alert('Error adding book: ' + err.message);
-    });
-  }
-   ngOnInit() {}
-
-  uploadVideo(event) {
-    const VideoName = this.makeid(10) + '.MKV';
- 
-    const file = event.target.files[0];
-    const filePath = 'uploads/videos/' + VideoName;
-    const ref = this.afs.ref(filePath);
-    const task = ref.put(file);
-    
-    return this.uploadProgress = task.percentageChanges();
- }
-  retreiveVideo(video) {
-   console.log(video);
-   const ref = this.afs.ref('uploads/videos/' + video);
-   return ref.getDownloadURL();
- }
- makeid(length) {
-   let result           = '';
-   const characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-   const charactersLength = characters.length;
-   for (  let i = 0; i < length; i++ ) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-   }
-   return result;
-}
+ ngOnInit(){}
 
 async presentPrompt() {
   const alert = await this.alertCtrl.create({
@@ -77,21 +36,17 @@ async presentPrompt() {
         handler: () => {
           console.log('cancelled');
         }
-<<<<<<< HEAD
-      },
-
-=======
       }, {
         text: 'Watch Video',
         role:'watch',
         cssClass:'dark',
         handler: (data) => {
-       this.router.navigateByUrl('video')
+      // 
+          window.open('https://youtu.be/MiB1g1kbzXg');
         }
       }
  
       
->>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
@@ -111,21 +66,16 @@ async presentPrompt2() {
         handler: () => {
           console.log('cancelled');
         }
-<<<<<<< HEAD
-      },
-
-=======
       }, {
         text: 'Watch Video',
         role:'watch',
         cssClass:'dark',
         handler: (data) => {
-       this.router.navigateByUrl('video')
+          window.open('https://youtu.be/tOluxtc3Cpw');
         }
       }
  
       
->>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
@@ -143,21 +93,16 @@ async presentPrompt3() {
         handler: () => {
           console.log('cancelled');
         }
-<<<<<<< HEAD
-      },
-
-=======
       }, {
         text: 'Watch Video',
         role:'watch',
         cssClass:'dark',
         handler: (data) => {
-       this.router.navigateByUrl('video')
+          window.open('https://youtu.be/ldk_WE74gyY');
         }
       }
  
       
->>>>>>> 69de7fc8b18a477c1e62239d821910da1a2568c0
     ]
   });
   await alert.present();
