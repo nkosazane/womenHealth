@@ -56,6 +56,7 @@ export class RegisterPage implements OnInit {
         email: this.register.value.email,
         age: this.register.value.age,
         gender: this.register.value.gender,
+        userid: this.afAuth.auth.currentUser.uid,
       }).then(() => {
         this.router.navigateByUrl('login');
       }).catch(err =>{

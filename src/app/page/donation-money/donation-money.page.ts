@@ -66,13 +66,14 @@ export class DonationMoneyPage implements OnInit {
          name: donation.name,
          surname: donation.surname,
          location: donation.location,
-         TimeStamp:firebase.firestore.FieldValue.serverTimestamp(),
+         date: Date.now(),
          type: donation.type
        }).then (() =>{
-         this.router.navigateByUrl('paypal');
+         this.router.navigateByUrl('drop-off');
        })
    
      }
+   
 
   back(){
     this.router.navigateByUrl('donation')

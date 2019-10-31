@@ -42,113 +42,28 @@
  <br>
  <br>
  
-<!-- <ion-label class="Donation">Donation history</ion-label>
-<br>
-<br> -->
-<!-- <div *ngFor="let item of donateList"> -->
-<!-- <ion-item color="secondary">
-  <ion-label>Name:</ion-label>
-  {{item?.name}}
-  </ion-item> -->
-    <!-- <br>
-  <ion-item color="secondary">
-  <ion-label>Surname:</ion-label>
-  {{item?.surname}}
-  </ion-item>
-    <br> -->
-    <!-- <br>
-  <ion-item color="secondary">
-  <ion-label>Location:</ion-label>
-  {{item?.location}}
-  </ion-item>
-    <br>
-  <ion-item color="secondary">
-  <ion-label>Type of Donation:</ion-label>
-    {{item?.type}}
-  </ion-item>
-    <br>
-  <ion-item color="secondary">
-  <ion-label>Date:</ion-label>
-    {{item?.date}}
-  </ion-item>
-    
- </div> -->
-
- <!-- <table >
-  <br>
-<h1>Donation History</h1>
-<br>
-  <tr>
-    <th>Location</th>
-
-    <th>Type of Donation</th>
-    
-    <th>Date</th>
-  </tr>
-  <tr>
-   <td>
-      <div *ngFor="let item of donateList">
-        {{item?.location}}
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        </div>
-   </td>
-   <td>
-  <div *ngFor="let item of donateList">
-    {{item?.type}}
-    &nbsp;
-    &nbsp;
-    &nbsp;  
-  </div>
-   </td>
-/ -->
- <!-- <td>
-  <div *ngFor="let item of donateList">
-  {{item?.date}}
-    
-    </div>
-</td> -->
-  <!-- </tr>
-</table> -->
-<label>LOCATION</label>
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-
-
-<label>TYPE OF DONATION</label>
-
 <div *ngFor="let item of donateList">
 <ion-grid>
     <ion-row>
       
       <ion-col>
+          <ion-label><b><i>Location: </i></b></ion-label>
+        <br>
+        <br>
           {{item?.location}}
           &nbsp;
           &nbsp;
 
       </ion-col>
       <ion-col>
-          {{item?.type}}
+          <ion-label><b><i>Date: </i></b></ion-label>
+          <br>
+          <br>
+        {{item.date | date:'dd-MM-yyy'}}
       </ion-col>
     </ion-row>
-     <ion-row>
-      
-        <!-- <ion-col>
-            ion-col
-          </ion-col>
-          <ion-col>
-              ion-col
-            </ion-col> -->
-       
-    </ion-row>
+     
   </ion-grid>
 </div>
+
  </ion-content>

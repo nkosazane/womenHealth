@@ -47,7 +47,7 @@ export class ChatForumPage implements OnInit {
        UserID: this.afAuth.auth.currentUser.uid,
        TimeStamp:firebase.firestore.FieldValue.serverTimestamp(),
       });
-      this.message='';
+      // this.message='';
     } 
  }
 

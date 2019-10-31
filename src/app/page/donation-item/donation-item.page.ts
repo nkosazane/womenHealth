@@ -20,19 +20,19 @@ export class DonationItemPage implements OnInit {
   }
   
   form(donation: Donation){
- const userid = this.afAuth.auth.currentUser.uid;
-
-    this.angularfire.collection('donation/donators/'+userid).add({
-      Userid:this.afAuth.auth.currentUser.uid,
-      name: donation.name,
-      surname: donation.surname,
-      location: donation.location,
-      date: this.donation.date = new Date(),
-      type: donation.type
-    }).then (() =>{
-      this.router.navigateByUrl('drop-off');
-    })
-
-  }
+    const userid = this.afAuth.auth.currentUser.uid;
+   
+       this.angularfire.collection('donation/donators/'+userid).add({
+         Userid:this.afAuth.auth.currentUser.uid,
+         name: donation.name,
+         surname: donation.surname,
+         location: donation.location,
+         date: Date.now(),
+         type: donation.type
+       }).then (() =>{
+         this.router.navigateByUrl('drop-off');
+       })
+   
+     }
 
 }

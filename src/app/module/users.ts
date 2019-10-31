@@ -4,4 +4,5 @@ class Users {
     email: string;
     age: number;
     gender: string;
+    
 }
