@@ -32,7 +32,7 @@ export class DonationPage implements OnInit {
   form(donation: Donation){
     const userid = this.afAuth.auth.currentUser.uid;
    
-       this.angularfire.collection('donation/donators/'+userid).add({
+       this.angularfire.collection('donation/'+ userid +'/donations').add({
          Userid:this.afAuth.auth.currentUser.uid,
          name: donation.name,
          surname: donation.surname,

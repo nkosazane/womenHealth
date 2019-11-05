@@ -18,7 +18,7 @@ export class DonationService {
   
    }
    getFile(key){
-    return this.angularfire.collection('donation').doc('donators').collection(key).valueChanges();
+    return this.angularfire.collection('donation').doc(key).collection('donations').valueChanges();
   }
 
 }
