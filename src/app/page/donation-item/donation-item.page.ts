@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-donation-item',
@@ -22,13 +21,15 @@ export class DonationItemPage implements OnInit {
   form(donation: Donation){
     const userid = this.afAuth.auth.currentUser.uid;
    
-       this.angularfire.collection('donation/'+ userid +'/donations').add({
-         Userid:this.afAuth.auth.currentUser.uid,
-         name: donation.name,
-         surname: donation.surname,
-         location: donation.location,
-         date: Date.now(),
-         type: donation.type
+    this.angularfire.collection('donation/'+ userid +'/donations').add({
+      Userid:this.afAuth.auth.currentUser.uid,
+      name: donation.name,
+      surname: donation.surname,
+      // location: donation.location,
+      date: Date.now(),
+      type: donation.type,
+      phoneNumber: donation.phoneNumber,
+      description: donation.description,
        }).then (() =>{
          this.router.navigateByUrl('drop-off');
        })

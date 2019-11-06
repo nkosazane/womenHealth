@@ -21,30 +21,21 @@ Maximum 30 characters
 </div>
 <ion-item>
 <ion-label position="floating">Gender:</ion-label>
-<ion-input type="text" formControlName="gender" required></ion-input>
-</ion-item>
-<div class="error" *ngIf="register.get('gender').hasError('required') && register.get('gender').touched">
-Please input your Name
-</div>
-<div class="error" *ngIf="register.get('gender').hasError('minlength') && register.get('gender').touched">
-Minimum 3 characters
-</div>
-<div class="error" *ngIf="register.get('gender').hasError('maxlength') && register.get('gender').touched">
-Maximum 30 characters
-</div>
+<!-- <ion-input type="text" formControlName="gender" required></ion-input> -->
+<ion-select formControlName="gender" required>
+        <ion-select-option type="text" value="Male">Male</ion-select-option>
+        <ion-select-option type="text" value="Female">Female</ion-select-option>
+      </ion-select>
+ </ion-item>
+<!--<div class="error" *ngIf="register.get('gender').hasError('required') && register.get('gender').touched">
+Please select Gender
+</div> -->
+
 <ion-item>
 <ion-label position="floating">Age:</ion-label>
 <ion-input type="text" formControlName="age" required></ion-input>
 </ion-item>
-<div class="error" *ngIf="register.get('age').hasError('required') && register.get('age').touched">
-Please input your Name
-</div>
-<div class="error" *ngIf="register.get('age').hasError('minlength') && register.get('age').touched">
-Minimum 3 characters
-</div>
-<div class="error" *ngIf="register.get('age').hasError('maxlength') && register.get('age').touched">
-Maximum 30 characters
-</div>
+
 <ion-item>
 <ion-label position="floating">Email:</ion-label>
 <ion-input type="email" formControlName="email"></ion-input>

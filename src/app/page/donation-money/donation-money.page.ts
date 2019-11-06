@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { PayPal } from '@ionic-native/paypal/ngx';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
-import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-donation-money',
@@ -12,48 +11,16 @@ import * as firebase from 'firebase';
 })
 export class DonationMoneyPage implements OnInit {
 
-  donation = {} as Donation;
+  donation = {} as Donation
 
-  paymentAmount: string = '3.33';
-  currency: string = 'USD';
-  currencyIcon: string = '$';
+  paymentAmount: string = '0.00';
+  currency: string = 'ZAR';
+  currencyIcon: string = 'R';
 
   constructor(private router: Router,
   private paypal:PayPal,private angularfire:  AngularFirestore,
   private afAuth: AngularFireAuth
-  ) {
-  //   let _this = this;
-  //   setTimeout(() => {
-  //     // Render the PayPal button into #paypal-button-container
-  //     <any>window['paypal'].Buttons({
-
-  //       // Set up the transaction
-  //       createOrder: function (data, actions) {
-  //         return actions.order.create({
-  //           purchase_units: [{
-  //             amount: {
-  //               value: _this.paymentAmount
-  //             }
-  //           }]
-  //         });
-  //       },
-
-  //       // Finalize the transaction
-  //       onApprove: function (data, actions) {
-  //         return actions.order.capture()
-  //           .then(function (details) {
-  //             console.log(details);
-  //             // Show a success message to the buyer
-  //             alert('Transaction completed by ' + details.payer.name.given_name + '!');
-  //           })
-  //           .catch(err => {
-  //             console.log(err);
-  //           })
-  //       }
-  //     }).render('#paypal-button-container');
-  //   }, 500)
-
-    }
+  ) {}
 
   ngOnInit() {
   }
@@ -67,14 +34,15 @@ export class DonationMoneyPage implements OnInit {
          surname: donation.surname,
          location: donation.location,
          date: Date.now(),
-         type: donation.type
+         type: donation.type,
+         phoneNumber: donation.phoneNumber,
+         description: donation.description,
        }).then (() =>{
          this.router.navigateByUrl('paypal');
        })
    
      }
    
-
   back(){
     this.router.navigateByUrl('donation')
   }

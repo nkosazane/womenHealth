@@ -4,7 +4,7 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>
-      Donate Money
+      Donation Form
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -23,13 +23,25 @@
             <ion-input required type="text" [(ngModel)]="donation.surname"></ion-input>
           </ion-item>
           <ion-item>
+              <ion-label position="stacked">Contact Number<ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text" [(ngModel)]="donation.phoneNumber"></ion-input>
+            </ion-item>
+          <!-- <ion-item>
             <ion-label position="stacked">Location<ion-text color="danger">*</ion-text></ion-label>
             <ion-input required type="text" [(ngModel)]="donation.location"></ion-input>
-          </ion-item>
+          </ion-item> -->
           <ion-item>
             <ion-label position="stacked">Type<ion-text color="danger">*</ion-text></ion-label>
-            <ion-input required type="text" [(ngModel)]="donation.type"></ion-input>
+            <!-- <ion-input required type="text" [(ngModel)]="donation.type"></ion-input> -->
+            <ion-select [(ngModel)]="donation.type" required>
+                <ion-select-option type="text" value="Money">Money</ion-select-option>
+                <ion-select-option type="text" value="Package">Package</ion-select-option>
+              </ion-select>
           </ion-item>
+          <ion-item>
+              <ion-label position="stacked">Description<ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text" [(ngModel)]="donation.description"></ion-input>
+            </ion-item>
         </ion-list>
       <ion-button expand="block" color="primary" (click)="form(donation)"><b>Submit</b></ion-button> 
   </ion-content>

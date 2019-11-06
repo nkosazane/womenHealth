@@ -34,7 +34,6 @@ export class RegisterPage implements OnInit {
           Validators.required
         ])),
         gender: new FormControl('', Validators.compose([
-          Validators.minLength(3),
           Validators.required
         ])),
         age: new FormControl('', Validators.compose([

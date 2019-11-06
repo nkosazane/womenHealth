@@ -12,9 +12,9 @@ export class PaypalPage implements OnInit {
   
   constructor( private paypal:PayPal) { }
 
-  paymentAmount: string = '3.33';
-  currency: string = 'USD';
-  currencyIcon: string = '$';
+  paymentAmount: string = '0.00';
+  currency: string = 'ZAR';
+  currencyIcon: string = 'R';
 
   payWithPaypal() {
     console.log("Pay ????");
@@ -30,25 +30,7 @@ export class PaypalPage implements OnInit {
         let payment = new PayPalPayment(this.paymentAmount, this.currency, 'Description', 'sale');
         this.paypal.renderSinglePaymentUI(payment).then((res) => {
           console.log(res);
-          // Successfully paid
-
-          // Example sandbox response
-          //
-          // {
-          //   "client": {
-          //     "environment": "sandbox",
-          //     "product_name": "PayPal iOS SDK",
-          //     "paypal_sdk_version": "2.16.0",
-          //     "platform": "iOS"
-          //   },
-          //   "response_type": "payment",
-          //   "response": {
-          //     "id": "PAY-1AB23456CD789012EF34GHIJ",
-          //     "state": "approved",
-          //     "create_time": "2016-10-03T13:33:33Z",
-          //     "intent": "sale"
-          //   }
-          // }
+         
         }, () => {
           // Error or render dialog closed without being successful
         });
@@ -59,9 +41,6 @@ export class PaypalPage implements OnInit {
       // Error in initialization, maybe PayPal isn't supported or something else
     });
   }
-
-
-
 
   ngOnInit() {
   }

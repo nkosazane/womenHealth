@@ -11,63 +11,69 @@
 
  <ion-content padding class="background-image">
    <br>
-    <ion-label class="User">User Information</ion-label>
+    <ion-label  class="User">User Information</ion-label>
    <br>
-   <br>
-    <ion-item color="secondary">
+   <br> <br>
+    <!-- <ion-item color="secondary"> -->
       <ion-label>Name:</ion-label>
-      {{userList?.displayName}}
-  </ion-item>
+     <div float-right> {{userList?.displayName}}</div>
+  <!-- </ion-item> -->
     <br>
-    <ion-item color="secondary">
+    <br>
+    <!-- <ion-item color="secondary"> -->
       <ion-label>Age:</ion-label>
-    {{userList?.age}}
-  </ion-item>
+      <div float-right>{{userList?.age}}</div>
+  <!-- </ion-item> -->
     <br>
-    <ion-item color="secondary">
+    <br>
+    <!-- <ion-item color="secondary"> -->
       <ion-label>Gender:</ion-label>
-    {{userList?.gender}}
-  </ion-item>
+      <div float-right>{{userList?.gender}}</div>
+  <!-- </ion-item> -->
     <br>
-    <ion-item color="secondary">
+    <br>
+    <!-- <ion-item color="secondary"> -->
       <ion-label>Email:</ion-label>
-    {{userList?.email}}
-  </ion-item>
+      <div float-right>{{userList?.email}}</div>
+  <!-- </ion-item> -->
+    <br><br>
     <br>
-    <ion-item color="secondary">
-      <ion-label>User ID:</ion-label>
-    {{userList?.userid}}
-  </ion-item>
+    <!-- <ion-item color="secondary"> -->
+      <!-- <ion-label>User ID:</ion-label>
+    {{userList?.userid}} -->
+  <!-- </ion-item> -->
 
+ <!-- <br> -->
  <br>
  <br>
- <br>
- <ion-label class="User">Donation History</ion-label>
+ <ion-label align="center" class="User">Donation History</ion-label>
 <br>
 <br>
  
-<div *ngFor="let item of donateList">
-<ion-grid>
-    <ion-row>
-      
-      <ion-col>
-          <ion-label><b><i>Location: </i></b></ion-label>
-        <br>
-        <br>
-          {{item?.location}}
-          &nbsp;
-          &nbsp;
 
-      </ion-col>
-      <ion-col>
-          <ion-label><b><i>Date: </i></b></ion-label>
-          <br>
-          <br>
+<div *ngFor="let item of donateList">
+
+  <table>
+    <tr>
+      <th>
+          <ion-label><b><i>Location </i></b></ion-label>
+      </th>
+          <th>
+            <ion-label><b><i>Date </i></b></ion-label>
+          </th>
+          </tr>
+
+          <tr>
+            <td>
+          {{item?.location}}
+        </td>
+        <td>
         {{item.date | date:'dd-MM-yyy'}}
-      </ion-col>
-    </ion-row>
+     </td>
+     </tr>
      
-  </ion-grid>
+  </table>
+
 </div>
 
  </ion-content>

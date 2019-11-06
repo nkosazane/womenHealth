@@ -13,150 +13,22 @@
         <img src="../../../assets/Capture1.JPG" alt="Mon" class="Mon" style="cursor: pointer;">
     </div>
     <ion-list>
-
-
         <ion-item>
             <ion-label>Gauteng</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="BosmontClinic">Bosmont Clinic</ion-select-option>
-                <ion-select-option value="AlbertonClinic">Ekurhuleni Alberton North Clinic</ion-select-option>
-                <ion-select-option value="SkinnerClinic">Skinner Street Clinic</ion-select-option>
-                <ion-select-option value="RandvaalClinic">Randvaal Clinic</ion-select-option>
-                <ion-select-option value="RandvaalClinic">Randvaal Clinic</ion-select-option>
-                <ion-select-option value="LuckyMkhwanaziClinic">Lucky Mkhwanazi Clinic</ion-select-option>
-                <ion-select-option value="WelverdiendClinic">Welverdiend Clinic</ion-select-option>
-                <ion-select-option value="Odirileng">Odirileng Maponya Clinic</ion-select-option>
-                <ion-select-option value="RandfonteinMunicipalClinic">Randfontein Municipal Clinic</ion-select-option>
-                <ion-select-option value="WestonariaMunicipalClinic">Westonaria Municipal Clinic</ion-select-option>
+            <ion-select required type="text" [(ngModel)]="donation.location" cancelText="Cancel" okText="Ok">
+                <ion-select-option type="text" value="Bosmont Clinic">Bosmont Clinic</ion-select-option>
+                <ion-select-option type="text" value="Alberton Clinic">Ekurhuleni Alberton North Clinic</ion-select-option>
+                <ion-select-option type="text" value="Skinner Clinic">Skinner Street Clinic</ion-select-option>
+                <ion-select-option type="text" value="Randvaal Clinic">Randvaal Clinic</ion-select-option>
+                <ion-select-option type="text" value="Randvaal Clinic">Randvaal Clinic</ion-select-option>
+                <ion-select-option type="text" value="LuckyMkhwanazi Clinic">Lucky Mkhwanazi Clinic</ion-select-option>
+                <ion-select-option type="text" value="Welverdiend Clinic">Welverdiend Clinic</ion-select-option>
+                <ion-select-option type="text" value="Odirileng">Odirileng Maponya Clinic</ion-select-option>
+                <ion-select-option type="text" value="RandfonteinMunicipal Clinic">Randfontein Municipal Clinic</ion-select-option>
+                <ion-select-option type="text" value="WestonariaMunicipal Clinic">Westonaria Municipal Clinic</ion-select-option>
             </ion-select>
         </ion-item>
 
-        <ion-item>
-            <ion-label>Free State</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="KagisanongClinic">Kagisanong Clinic</ion-select-option>
-                <ion-select-option value="freeState">Thusong Clinic</ion-select-option>
-                <ion-select-option value="WestdeneClinic">Westdene Clinic</ion-select-option>
-                <ion-select-option value="FreedomSquareClinic">Freedom Square Clinic</ion-select-option>
-                <ion-select-option value="BathoClinic">Batho Clinic</ion-select-option>
-                <ion-select-option value="OpkomsClinic">Opkoms Clinic</ion-select-option>
-                <ion-select-option value="FreedomSquareClinic">Freedom Square Clinic</ion-select-option>
-                <ion-select-option value="MolemoHealthcareClinic">Molemo Healthcare Clinic</ion-select-option>
-                <ion-select-option value="FichardtParkClinic">Fichardt Park Clinic</ion-select-option>
-                <ion-select-option value="KaraboClinic">Karabo Clinic</ion-select-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Eastern Cape</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="TabankuluHealthCentre">Tabankulu Health Centre</ion-select-option>
-                <ion-select-option value="UmtataGatewayClinic">Umtata Gateway Clinic</ion-select-option>
-                <ion-select-option value="ThornhillClinic">Thornhill Clinic</ion-select-option>
-                <ion-select-option value="KomgaClinic">Komga Clinic</ion-select-option>
-                <ion-select-option value="BeatriceNgwentleClinic">Beatrice Ngwentle Clinic</ion-select-option>
-                <ion-select-option value="MxhalangaClinic">Mxhalanga Clinic</ion-select-option>
-                <ion-select-option value="EmpilweniGompoHealthCare">Empilweni Gompo Health Care</ion-select-option>
-                <ion-select-option value="AlgoaClinic">Algoa Clinic</ion-select-option>
-                <ion-select-option value="CentralClinic">Central Clinic</ion-select-option>
-                <ion-select-option value="TarynLaineClinic">Taryn Laine Clinic</ion-select-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Kwazulu Natal</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="KZNDayClinic">KZN Day Clinic</ion-select-option>
-                <ion-select-option value="WatersmeetClinic">Watersmeet Clinic</ion-select-option>
-                <ion-select-option value="RichmondClinic">Richmond Clinic</ion-select-option>
-                <ion-select-option value="SingisiClinic">Singisi Clinic</ion-select-option>
-                <ion-select-option value="UmlaziDClinic">Umlazi D Clinic</ion-select-option>
-                <ion-select-option value="ChestervilleClinic">Chesterville Clinic</ion-select-option>
-                <ion-select-option value="TholusizoClinic">Tholusizo Clinic</ion-select-option>
-                <ion-select-option value="AmaotiClinic">Amaoti Clinic</ion-select-option>
-                <ion-select-option value="VumuthandoClinic">Vumuthando Clinic</ion-select-option>
-                <ion-select-option value="GingindlovuClinic">Gingindlovu Clinic</ion-select-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Limpopo</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="SeshegoClinic2">Seshego Clinic 2</ion-select-option>
-                <ion-select-option value="MoedingClinic">Moeding Clinic</ion-select-option>
-                <ion-select-option value="NorthamPlatinumMineClinic">Northam Platinum Mine Clinic</ion-select-option>
-                <ion-select-option value="MediclinicLimpopoDayClinic">Mediclinic Limpopo Day Clinic</ion-select-option>
-                <ion-select-option value="KlipspruitClinic">Klipspruit Clinic</ion-select-option>
-                <ion-select-option value="MankwengPrimaryHealthClinic">Mankweng Primary Health Clinic</ion-select-option>
-                <ion-select-option value="GiyaneCommunityHealthcareCentre">Giyane Community Healthcare Centre</ion-select-option>
-                <ion-select-option value="TshifudiClinic">Tshifudi Clinic</ion-select-option>
-                <ion-select-option value="TshikuwiClinic">Tshikuwi Clinic</ion-select-option>
-                <ion-select-option value="MakhanyeClinic">Makhanye Clinic</ion-select-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Mpumalanga</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="PolyClinic">Poly Clinic</ion-select-option>
-                <ion-select-option value="VerenaCommunityHealthClinic">Verena Community Health Clinic</ion-select-option>
-                <ion-select-option value="BotlengClinicExt3">Botleng Clinic Ext 3</ion-select-option>
-                <ion-select-option value="BethalMunicipalClinic">Bethal Municipal Clinic</ion-select-option>
-                <ion-select-option value="EmzinoniClinic">Emzinoni Clinic</ion-select-option>
-                <ion-select-option value="DarkCityCommunityHealthClinic">Dark City Community Health Clinic</ion-select-option>
-                <ion-select-option value="EmthonjeniClinic">Emthonjeni Clinic</ion-select-option>
-                <ion-select-option value="KwaggafonteinAClinic">Kwaggafontein A Clinic</ion-select-option>
-                <ion-select-option value="Ka-NyamazaneCommunityHealthClinic">Ka-Nyamazane Community Health Clinic</ion-select-option>
-                <ion-select-option value="MpumalangaCapitalClinic">Mpumalanga Capital Clinic</ion-select-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Northern Cape</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="FlorianvilleClinic">Florianville Clinic</ion-select-option>
-                <ion-select-option value="WrenchvilleClinic">Wrenchville Clinic</ion-select-option>
-                <ion-select-option value="BreipaalClinic">Breipaal Clinic</ion-select-option>
-                <ion-select-option value="LouisvaleClinic">Louisvale Clinic</ion-select-option>
-                <ion-select-option value="MedicrossKimberley">Medicross Kimberley</ion-select-option>
-                <ion-select-option value="ProgressClinic">Progress Clinic</ion-select-option>
-                <ion-select-option value="RitchieClinic">Ritchie Clinic</ion-select-option>
-                <ion-select-option value="LingelethuClinic">Lingelethu Clinic</ion-select-option>
-                <ion-select-option value="KimberleyCityClinic">Kimberley City Clinic</ion-select-option>
-                <ion-select-option value="SarahStraussClinic">Sarah Strauss Clinic</ion-select-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>North West</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="AcusticareHearingClinic">Acusticare Hearing Clinic</ion-select-option>
-                <ion-select-option value="SilverkransClinic">Silverkrans Clinic</ion-select-option>
-                <ion-select-option value="HealthCareCentre">Health Care Centre</ion-select-option>
-                <ion-select-option value="ParkmedNeuroclinic">Parkmed Neuroclinic</ion-select-option>
-                <ion-select-option value="MadidiClinic">Madidi Clinic</ion-select-option>
-                <ion-select-option value="MensClinicInternational">Mens Clinic International</ion-select-option>
-                <ion-select-option value="LetlhabileCommunityClinic">Letlhabile Community Clinic</ion-select-option>
-                <ion-select-option value="MotlhabengClinic">Motlhabeng Clinic</ion-select-option>
-                <ion-select-option value="ThekwaneClinic">Thekwane Clinic</ion-select-option>
-                <ion-select-option value="KarlienParkClinic">Karlien Park Clinic</ion-select-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Western West</ion-label>
-            <ion-select multiple="true" cancelText="Cancel" okText="Ok">
-                <ion-select-option value="PinegroveWellnessClinic">Pinegrove Wellness Clinic</ion-select-option>
-                <ion-select-option value="BloekombosClinic">Bloekombos Clinic</ion-select-option>
-                <ion-select-option value="MerwevilleClinic">Merweville Clinic</ion-select-option>
-                <ion-select-option value="CentralKarooDistrict">Central Karoo District Clinic</ion-select-option>
-                <ion-select-option value="KnysnaTownClinic">Knysna Town Clinic</ion-select-option>
-                <ion-select-option value="KeurhoekClinic">Keurhoek Clinic</ion-select-option>
-                <ion-select-option value="SkinDeepClinic">Skin Deep Clinic</ion-select-option>
-                <ion-select-option value="RailtonClinic">Railton Clinic</ion-select-option>
-                <ion-select-option value="ThekwaneClinic">Vredenburg Clinic</ion-select-option>
-                <ion-select-option value="RiebeeckWestClinic">Riebeeck West Clinic</ion-select-option>
-            </ion-select>
-        </ion-item>
     </ion-list>
+    <ion-button expand="block" color="primary" (click)="form(donation)"><b>Submit</b></ion-button> 
 </ion-content>

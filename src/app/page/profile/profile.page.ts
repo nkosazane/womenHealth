@@ -28,11 +28,10 @@ export class ProfilePage implements OnInit {
       console.log(data);
     });
 
-    // this.users=afstore.collection('donation').valueChanges();
   }
 
   ngOnInit() {
-    // this.donators = this.donateServ.getdonator();
+  
     const key = this.afAuth.auth.currentUser.uid;
     this.userServ.getUser(key).subscribe(data =>{
       this.userList = data;
