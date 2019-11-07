@@ -27,10 +27,26 @@
               <ion-input required type="text" [(ngModel)]="donation.phoneNumber"></ion-input>
             </ion-item>
           <!-- <ion-item>
-            <ion-label position="stacked">Location<ion-text color="danger">*</ion-text></ion-label>
+            <ion-label position="stacked">Clinic Location<ion-text color="danger">*</ion-text></ion-label>
             <ion-input required type="text" [(ngModel)]="donation.location"></ion-input>
-          </ion-item> -->
-          <ion-item>
+          </ion-item>
+          <ion-item> -->
+              <ion-item>
+                  <ion-label>Clinic Location</ion-label>
+                  <ion-select required type="text" [(ngModel)]="donation.location" >
+                      <ion-select-option type="text" value="Bosmont Clinic">Bosmont Clinic</ion-select-option>
+                      <ion-select-option type="text" value="Alberton Clinic">Ekurhuleni Alberton North Clinic</ion-select-option>
+                      <ion-select-option type="text" value="Skinner Clinic">Skinner Street Clinic</ion-select-option>
+                      <ion-select-option type="text" value="Randvaal Clinic">Randvaal Clinic</ion-select-option>
+                      <ion-select-option type="text" value="Randvaal Clinic">Randvaal Clinic</ion-select-option>
+                      <ion-select-option type="text" value="LuckyMkhwanazi Clinic">Lucky Mkhwanazi Clinic</ion-select-option>
+                      <ion-select-option type="text" value="Welverdiend Clinic">Welverdiend Clinic</ion-select-option>
+                      <ion-select-option type="text" value="Odirileng">Odirileng Maponya Clinic</ion-select-option>
+                      <ion-select-option type="text" value="RandfonteinMunicipal Clinic">Randfontein Municipal Clinic</ion-select-option>
+                      <ion-select-option type="text" value="WestonariaMunicipal Clinic">Westonaria Municipal Clinic</ion-select-option>
+                  </ion-select>
+              </ion-item>
+              <ion-item>
             <ion-label position="stacked">Type<ion-text color="danger">*</ion-text></ion-label>
             <!-- <ion-input required type="text" [(ngModel)]="donation.type"></ion-input> -->
             <ion-select [(ngModel)]="donation.type" required>

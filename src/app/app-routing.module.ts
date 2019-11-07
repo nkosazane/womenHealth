@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: 'register', loadChildren: './page/register/register.module#RegisterPageModule' },
   { path: 'donation', loadChildren: './page/donation/donation.module#DonationPageModule' },
   { path: 'chat-forum', loadChildren: './page/chat-forum/chat-forum.module#ChatForumPageModule' },
-  { path: 'example-modal', loadChildren: './page/example-modal/example-modal.module#ExampleModalPageModule' },
   { path: 'donation-item', loadChildren: './page/donation-item/donation-item.module#DonationItemPageModule' },
   { path: 'donation-money', loadChildren: './page/donation-money/donation-money.module#DonationMoneyPageModule' },
   { path: 'video-tutorials', loadChildren: './page/video-tutorials/video-tutorials.module#VideoTutorialsPageModule' },
@@ -18,9 +17,7 @@ const routes: Routes = [
   { path: 'chat-forum1', loadChildren: './page/chat-forum1/chat-forum1.module#ChatForum1PageModule' },
   { path: 'chat-forum2', loadChildren: './page/chat-forum2/chat-forum2.module#ChatForum2PageModule' },
   { path: 'drop-off', loadChildren: './page/drop-off/drop-off.module#DropOffPageModule' },
-  { path: 'pariod-tracker', loadChildren: './page/pariod-tracker/pariod-tracker.module#PariodTrackerPageModule' },
-  { path: 'slides', loadChildren: './page/slides/slides.module#SlidesPageModule' },
-  { path: 'tracker', loadChildren: './page/tracker/tracker.module#TrackerPageModule' },  { path: 'video', loadChildren: './page/video/video.module#VideoPageModule' }
+  { path: 'tracker', loadChildren: './page/tracker/tracker.module#TrackerPageModule' },
 
 
 

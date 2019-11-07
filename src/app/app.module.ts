@@ -16,15 +16,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 
 import { PayPal } from '@ionic-native/paypal/ngx';
-import { ExampleModalPageModule } from './page/example-modal/example-modal.module';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
-
-import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Camera } from '@ionic-native/camera/ngx';
 import { NgCalendarModule  } from 'ionic2-calendar';
-import { VideoPlayer } from '@ionic-native/video-player/ngx';
-import { AndroidExoplayer } from '@ionic-native/android-exoplayer/ngx';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC1TA8JQDneK2YCLgDNUPpGQgFwvPByeaw",
@@ -51,7 +46,6 @@ const firebaseConfig = {
       AngularFireAuthModule,
       AngularFirestoreModule,
       AngularFireStorageModule,
-      ExampleModalPageModule,
       NgCalendarModule,
     
     ],
@@ -61,9 +55,7 @@ const firebaseConfig = {
     Camera,
     AuthService,
     PayPal,
-    VideoPlayer,
     AngularFirestore,
-    AndroidExoplayer,    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

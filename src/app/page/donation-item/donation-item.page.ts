@@ -25,13 +25,14 @@ export class DonationItemPage implements OnInit {
       Userid:this.afAuth.auth.currentUser.uid,
       name: donation.name,
       surname: donation.surname,
-      // location: donation.location,
+      location: donation.location,
       date: Date.now(),
       type: donation.type,
       phoneNumber: donation.phoneNumber,
       description: donation.description,
        }).then (() =>{
-         this.router.navigateByUrl('drop-off');
+         this.router.navigate(['/drop-off'], {queryParams:{name: donation.name, surname: donation.surname, location: donation.location, type: donation.type,
+        phoneNumber: donation.phoneNumber, description: donation.description}});
        })
    
      }

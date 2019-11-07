@@ -12,23 +12,45 @@
     <div class="Mon">
         <img src="../../../assets/Capture1.JPG" alt="Mon" class="Mon" style="cursor: pointer;">
     </div>
-    <ion-list>
+    <br>
+    <br>
+
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <br>
+        <div class="center">
+            <ion-label><b>Confirm Donation </b></ion-label>
+        </div>
+
         <ion-item>
-            <ion-label>Gauteng</ion-label>
-            <ion-select required type="text" [(ngModel)]="donation.location" cancelText="Cancel" okText="Ok">
-                <ion-select-option type="text" value="Bosmont Clinic">Bosmont Clinic</ion-select-option>
-                <ion-select-option type="text" value="Alberton Clinic">Ekurhuleni Alberton North Clinic</ion-select-option>
-                <ion-select-option type="text" value="Skinner Clinic">Skinner Street Clinic</ion-select-option>
-                <ion-select-option type="text" value="Randvaal Clinic">Randvaal Clinic</ion-select-option>
-                <ion-select-option type="text" value="Randvaal Clinic">Randvaal Clinic</ion-select-option>
-                <ion-select-option type="text" value="LuckyMkhwanazi Clinic">Lucky Mkhwanazi Clinic</ion-select-option>
-                <ion-select-option type="text" value="Welverdiend Clinic">Welverdiend Clinic</ion-select-option>
-                <ion-select-option type="text" value="Odirileng">Odirileng Maponya Clinic</ion-select-option>
-                <ion-select-option type="text" value="RandfonteinMunicipal Clinic">Randfontein Municipal Clinic</ion-select-option>
-                <ion-select-option type="text" value="WestonariaMunicipal Clinic">Westonaria Municipal Clinic</ion-select-option>
-            </ion-select>
+            <ion-label position="stacked">Name: <ion-text>{{donation.name}}</ion-text>
+            </ion-label>
         </ion-item>
 
+        <ion-item>
+            <ion-label position="stacked">Surname: <ion-text>{{donation.surname}}</ion-text>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Contact Number: <ion-text>{{donation.phoneNumber}}</ion-text>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Location: <ion-text>{{donation.location}}</ion-text>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Type: <ion-text>{{donation.type}}</ion-text>
+            </ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Item Description: <ion-text>{{donation.description}}</ion-text>
+            </ion-label>
+        </ion-item>
     </ion-list>
-    <ion-button expand="block" color="primary" (click)="form(donation)"><b>Submit</b></ion-button> 
+
+    <ion-button expand="block" color="primary" (click)="done()"><b>Confirm</b></ion-button>
 </ion-content>
